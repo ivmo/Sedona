@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sedona</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="main-header clearfix">
+          <nav class="main-navigation"><делать для этого меню .active, если в шаблоне ненарисовано?>
+            <ul>
+              <li>
+                <a href="#">информация</a>
+              </li>
+              <li>
+                <a href="#">фото и видео</a>
+              </li>
+              <li class="mini-logo">
+                <img src="#" width="" height="" alt="city of sedona">
+              </li>
+              <li>
+                <a href="#">карта штата</a>
+              </li>
+              <li>
+                <a href="#">гостиницы</a>
+              </li>
+            </ul>
+          </nav>
+      </header>
+
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo.png" width="" height="" alt="sedona">
+        </div>
+        <div class="main-title">
+        <h1 class="page-title">Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
+        <p class="index-content">Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
+        </div>
+
+        <div class="features-container">
+          <div class="features-top clearfix">
+            <section class="fetures-item color-fetures-item">
+              <div class="item-content">
+                <h2 class="white-title">Настоящий<span>городок</span></h2>
+                <p class="white-text">- №1 -</p>
+                <p class="white-text">седона - не аттракцион для туристов. там течет своя жизнь</p>
+              </div>
+            </section>
+            <figure class="img-item">
+              <img src="#" width="" height="" alt="мотель">
+            </figure>
+            <section class="fetures-item">
+              <div class="item-content">
+                <div class="icon-item"> <!-- здесь фигур нужен?-->
+                  <img src="#" width="" height="" alt="жилье">
+                </div>
+                <h2 class="content-title">жилье</h2>
+                <p class="index-content">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              </div>
+            </section>
+            <section class="fetures-item">
+              <div class="item-content">
+                <div class="icon-item">
+                  <img src="#" width="" height="" alt="еда">
+                </div>
+                <h2 class="content-title">еда</h2>
+                <p class="index-content">
+                  всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                </p>
+              </div>
+            </section>
+            <section class="fetures-item">
+              <div class="item-content">
+                <div class="icon-item">
+                  <img src="#" width="" height="" alt="сувениры">
+                </div>
+                <h2 class="content-title">сувениры</h2>
+                <p class="index-content">не только китайского, но и местного производства!</p>
+              </div>
+            </section>
+          </div>
+
+          <div class="features-bottom clearfix">
+            <figure class="img-item">
+              <img src="#" width="" height="" alt="мост дьявола">
+            </figure>
+            <section class="fetures-item color-fetures-item">
+              <div class="item-content">
+                <h2 class="white-title">там есть<span>мост дьявола</span></h2>
+                <p class="white-text">- №2 -</p>
+                <p class="white-text">да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
+            </section>
+            <section class="fetures-item">
+              <div class="item-content">
+                <h2 class="content-title">небольшая<span>площадь</span></h2>
+                <p class="index-content">- №3 -</p>
+                <p class="index-content">все достопримеча-<span>тельности находятся очень близко</span></p>
+              </div>
+            </section>
+            <section class="fetures-item">
+              <div class="item-content">
+                <h2 class="content-title">красивая<span>дорога</span></h2>
+                <p class="index-content">- №4 -</p>
+                <p class="index-content">ехать в седону из лас-вегаса совсем не скучно!</p>
+              </div>
+            </section>
+            <section class="fetures-item">
+              <div class="item-content">
+                <h2 class="content-title">мало<span>туристов</span></h2>
+                <p class="index-content">- №5 -</p>
+                <p class="index-content">большинство едет в гранд каньон и толпится там</p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="container">
+          <div class="description-container">
+            <div class="description"><!--кажется, этот див лишний -->
+              <p class="index-content"><b>Заинтересовались?</b></p>
+              <p class="index-content">укажите предполагаемые даты поездки,<span>и мы покажем вам лучшие предложения гостиниц в седоне</span></p>
+            </div>
+          </div>
+          <section class="serch-container">
+            <div class="search-title">
+              <h2 class="white-title">Поиск гостиницы в седоне</h2><!--заголовок формы поиска в другом логическом блоке, это не правильно да? -->
+            </div>
+            <div class="search-form-container">
+              <div class="search-form">
+                <form action="/echo" method="get">
+                  <label for="date-in">Дата заезда:</label>
+                  <label for="date-out">Дата выезда:</label>
+                  <input type="date" name="date-in" id="date-in">
+                  <input type="date" name="date-out" id="date-out">
+                  <p>Взрослые:</p>
+                  <figure class="amount-people"><!-- здесь фигур или див ? -->
+                    <img src="#" width="" height="" alt="уменьшить">
+                  </figure>
+                  <div class="amount-people">
+                    <p>2</p>
+                  </div>
+                  <figure class="amount-people">
+                    <img src="#" width="" height="" alt="увеличить">
+                  </figure>
+                  <p>Дети:</p>
+                  <figure class="amount-people">
+                    <img src="#" width="" height="" alt="уменьшить">
+                  </figure>
+                  <div class="amount-people">
+                    <p>0</p>
+                  </div>
+                  <figure class="amount-people">
+                    <img src="#" width="" height="" alt="увеличить">
+                  </figure>
+                  <button class="btn btn-index-search" type="submit">Найти</button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <footer class="main-footer">
+        <div class="container clearfix">
+          <section class="footer-contacts">
+            visitsedona#
+          </section>
+          <section class="footer-social">
+            <a href="#" class="social-btn social-btn-tw">Твиттер</a>
+            <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
+            <a href="#" class="social-btn social-btn-ytb">ютуб</a>
+          </section>
+          <section class="footer-copyright">
+            <p>website by</p>
+            <img src="#" width="" height="" alt="HTML Academy">
+          </section>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
