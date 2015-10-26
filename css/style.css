@@ -1,0 +1,19 @@
+body {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: ptsans regular verdana sans-serif;
+  color: #000000;
+}
+.reason-title {
+  font-weight: bold;
+  font-size: 21px;
+  font-family: ptsans bold verdana sans-serif;
+  color: #000000;
+}
+.search-title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  font-family: ptsans bold verdana sans-serif;
+  color: #000000;
+}

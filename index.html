@@ -2,21 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
     <title>Sedona</title>
   </head>
   <body>
     <div class="main-container">
       <header class="main-header clearfix">
-          <nav class="main-navigation"><делать для этого меню .active, если в шаблоне ненарисовано?>
+          <nav class="main-navigation">
+            <figure class="logo">
+              <a href="#">
+                <img src="#" width="" height="" alt="city of sedona">
+              </a>
+            </figure>
             <ul>
               <li>
-                <a href="#">информация</a>
+                <a href="#" class="active">информация</a>
               </li>
-              <li>
+              <li class="offset">
                 <a href="#">фото и видео</a>
-              </li>
-              <li class="mini-logo">
-                <img src="#" width="" height="" alt="city of sedona">
               </li>
               <li>
                 <a href="#">карта штата</a>
@@ -28,154 +31,129 @@
           </nav>
       </header>
 
-      <div class="container">
-        <div class="logo">
-          <img src="img/logo.png" width="" height="" alt="sedona">
-        </div>
-        <div class="main-title">
-        <h1 class="page-title">Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
-        <p class="index-content">Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
-        </div>
-
-        <div class="features-container">
-          <div class="features-top clearfix">
-            <section class="fetures-item color-fetures-item">
-              <div class="item-content">
-                <h2 class="white-title">Настоящий<span>городок</span></h2>
-                <p class="white-text">- №1 -</p>
-                <p class="white-text">седона - не аттракцион для туристов. там течет своя жизнь</p>
-              </div>
-            </section>
-            <figure class="img-item">
-              <img src="#" width="" height="" alt="мотель">
-            </figure>
-            <section class="fetures-item">
-              <div class="item-content">
-                <div class="icon-item"> <!-- здесь фигур нужен?-->
-                  <img src="#" width="" height="" alt="жилье">
-                </div>
-                <h2 class="content-title">жилье</h2>
-                <p class="index-content">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-              </div>
-            </section>
-            <section class="fetures-item">
-              <div class="item-content">
-                <div class="icon-item">
-                  <img src="#" width="" height="" alt="еда">
-                </div>
-                <h2 class="content-title">еда</h2>
-                <p class="index-content">
-                  всегда заказывайте фирменный бургер, вы не разочаруетесь!
-                </p>
-              </div>
-            </section>
-            <section class="fetures-item">
-              <div class="item-content">
-                <div class="icon-item">
-                  <img src="#" width="" height="" alt="сувениры">
-                </div>
-                <h2 class="content-title">сувениры</h2>
-                <p class="index-content">не только китайского, но и местного производства!</p>
-              </div>
-            </section>
-          </div>
-
-          <div class="features-bottom clearfix">
-            <figure class="img-item">
-              <img src="#" width="" height="" alt="мост дьявола">
-            </figure>
-            <section class="fetures-item color-fetures-item">
-              <div class="item-content">
-                <h2 class="white-title">там есть<span>мост дьявола</span></h2>
-                <p class="white-text">- №2 -</p>
-                <p class="white-text">да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            </div>
-            </section>
-            <section class="fetures-item">
-              <div class="item-content">
-                <h2 class="content-title">небольшая<span>площадь</span></h2>
-                <p class="index-content">- №3 -</p>
-                <p class="index-content">все достопримеча-<span>тельности находятся очень близко</span></p>
-              </div>
-            </section>
-            <section class="fetures-item">
-              <div class="item-content">
-                <h2 class="content-title">красивая<span>дорога</span></h2>
-                <p class="index-content">- №4 -</p>
-                <p class="index-content">ехать в седону из лас-вегаса совсем не скучно!</p>
-              </div>
-            </section>
-            <section class="fetures-item">
-              <div class="item-content">
-                <h2 class="content-title">мало<span>туристов</span></h2>
-                <p class="index-content">- №5 -</p>
-                <p class="index-content">большинство едет в гранд каньон и толпится там</p>
-              </div>
-            </section>
-          </div>
-        </div>
-        <div class="container">
-          <div class="description-container">
-            <div class="description"><!--кажется, этот див лишний -->
-              <p class="index-content"><b>Заинтересовались?</b></p>
-              <p class="index-content">укажите предполагаемые даты поездки,<span>и мы покажем вам лучшие предложения гостиниц в седоне</span></p>
-            </div>
-          </div>
-          <section class="serch-container">
-            <div class="search-title">
-              <h2 class="white-title">Поиск гостиницы в седоне</h2><!--заголовок формы поиска в другом логическом блоке, это не правильно да? -->
-            </div>
-            <div class="search-form-container">
-              <div class="search-form">
-                <form action="/echo" method="get">
-                  <label for="date-in">Дата заезда:</label>
-                  <label for="date-out">Дата выезда:</label>
-                  <input type="date" name="date-in" id="date-in">
-                  <input type="date" name="date-out" id="date-out">
-                  <p>Взрослые:</p>
-                  <figure class="amount-people"><!-- здесь фигур или див ? -->
-                    <img src="#" width="" height="" alt="уменьшить">
-                  </figure>
-                  <div class="amount-people">
-                    <p>2</p>
-                  </div>
-                  <figure class="amount-people">
-                    <img src="#" width="" height="" alt="увеличить">
-                  </figure>
-                  <p>Дети:</p>
-                  <figure class="amount-people">
-                    <img src="#" width="" height="" alt="уменьшить">
-                  </figure>
-                  <div class="amount-people">
-                    <p>0</p>
-                  </div>
-                  <figure class="amount-people">
-                    <img src="#" width="" height="" alt="увеличить">
-                  </figure>
-                  <button class="btn btn-index-search" type="submit">Найти</button>
-                </form>
-              </div>
-            </div>
-          </section>
-        </div>
+      <div class="promo">
+        <img src="img/promo.png" width="" height="" alt="sedona">
       </div>
 
-      <footer class="main-footer">
-        <div class="container clearfix">
-          <section class="footer-contacts">
-            visitsedona#
+      <article class="reasons">
+
+        <header class="reasons-header">
+          <h1 class="reasons-title">Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
+          <p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
+        </header>
+
+        <div class="reasons-row reasons-row-image">
+          <section class="reason">
+            <h2 class="reason-title">Настоящий<br>городок</h2>
+            <div class="reason-number">- №1 -</div>
+            <p>седона - не аттракцион для туристов. там течет своя жизнь</p>
           </section>
-          <section class="footer-social">
+          <figure class="reason-picture">
+            <img src="img/hotel1200.jpg" width="800" height="256" alt="отель">
+          </figure>
+        </div>
+
+        <div class="reasons-row">
+          <section class="reason reason-icon reason-icon-home">
+            <h2 class="reason-title">Жилье</h2>
+            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          </section>
+          <section class="reason reason-icon reason-icon-food">
+            <h2 class="reason-title">Еда</h2>
+            <p>всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </section>
+          <section class="reason reason-icon reason-icon-gift">
+            <h2 class="reason-title">Сувениры</h2>
+            <p>не только китайского, но и местного производства!</p>
+          </section>
+        </div>
+
+        <div class="reason ns-row reasons-row-image reasons-row-image-invert">
+          <figure class="reason-picture">
+            <img src="img/bridge1200.jpg" width="800" height="256" alt="мотель">
+          </figure>
+          <section class="reason">
+            <h2 class="reason-title">Там есть<br>мост дьявола</h2>
+            <div class="reason-number">- №2 -</div>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </section>
+        </div>
+
+        <div class="reasons-row reasons-row-gray">
+          <section class="reason">
+            <h2 class="reason-title">Небольшая площадь</h2>
+            <div class="reason-number">- №3 -</div>
+            <p>все достопримеча-<span>тельности находятся очень близко</span></p>
+          </section>
+          <section class="reason">
+            <h2 class="reason-title">Красивая дорога</h2>
+            <div class="reason-number">- №4 -</div>
+            <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
+          </section>
+          <section class="reason">
+            <h2 class="reason-title">Мало туристов</h2>
+            <div class="reason-number">- №5 -</div>
+            <p>Большинство едет в гранд каньон и толпится там</p>
+          </section>
+        </div>
+      </article>
+
+      <div class="search">
+        <h2 class="search-title">Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <a href="#" class="search-btn">Поиск гостиницы в седоне</a>
+      </div>
+
+      <div class="map">
+
+        <div class="map-canvas"></div>
+
+        <div class="form">
+          <form action="/echo" method="get">
+
+            <div class="form-row">
+              <label for="date-in">Дата заезда:</label>
+              <input type="date" name="date-in" id="date-in">
+            </div>
+
+            <div class="form-row">
+              <label for="date-out">Дата выезда:</label>
+              <input type="date" name="date-out" id="date-out">
+            </div>
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="ad">Взрослые:</label>
+                <div class="counter">
+                  <button class="counter-btn"><i class="ico-minus"></i></button>
+                  <input type="text" name="ad" id="ad">
+                  <button class="counter-btn"><i class="ico-plus"></i></button>
+                </div>
+              </div>
+              <div class="form-col">
+                <label for="child">Дети:</label>
+                <div class="counter">
+                  <button class="counter-btn"><i class="ico-minus"></i></button>
+                  <input type="text" name="child" id="child">
+                  <button class="counter-btn"><i class="ico-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-submit" type="submit">Найти</button>
+          </form>
+        </div>
+
+        <footer class="main-footer">
+          <a href="#" class="hashtag">#visitsedona</a>
+          <div class="social">
             <a href="#" class="social-btn social-btn-tw">Твиттер</a>
             <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
             <a href="#" class="social-btn social-btn-ytb">ютуб</a>
-          </section>
-          <section class="footer-copyright">
-            <p>website by</p>
-            <img src="#" width="" height="" alt="HTML Academy">
-          </section>
-        </div>
-      </footer>
+          </div>
+          <div class="author">website by <a href="#"><img src="#" width="" height="" alt="HTML Academy"></a></div>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
