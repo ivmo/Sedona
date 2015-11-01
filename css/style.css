@@ -14,6 +14,17 @@ body {
   color: #000000;
   margin-bottom: 30px;
 }
+
+.reasons-title {
+  font-weight: bold;
+  font-size: 21px;
+  font-family: "PTSans bold" verdana sans-serif;
+  color: #000000;
+  margin: 0;
+  padding: 60px;
+  margin-bottom: 30px;
+}
+
 .search-title {
   font-weight: bold;
   font-size: 30px;
@@ -79,24 +90,29 @@ body {
 .promo {
   position: relative;
   width: 100%;
-  margin:0;
-  padding:0;
-    /*высоту задать? */
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  background: #ffffff;
+    /*как высоту задать? */
 }
 .promo img {
   position: absolute;
   top: 0;
   left: 0;
+  margin: 0;
 }
 /*как 3 картинки добавить? */
 .reasons {
   background: #ffffff;
+  margin: 0;
+  padding: 0;
 
 }
 
 .reasons-header {
   width: 575px;
-  padding: 60px auto;
+  padding: 0 auto;
   margin: 0 auto;
   line-height: 26px;
 
@@ -110,6 +126,7 @@ body {
 .reasons-row-image {
   background: #81b3d2;
   color: #ffffff;
+
 }
 
 .reasons-row:after {
@@ -124,6 +141,8 @@ body {
   min-width: 256px;
   max-width: 400px;
   width: 33.333333%;
+  margin: 0;
+  padding: 0;
   padding-top: 50px;
   padding-bottom: 40px;
 }
@@ -133,6 +152,8 @@ body {
   min-width: 512px;
   max-width: 800px;
   width: 66.666666%;
+  margin: 0;
+  padding: 0;
 }
 
 .reason-icon {
@@ -217,10 +238,11 @@ body {
 
 .hashtag {
   font-size: 14px;
+  margin-right: 20px;
 }
 .social {
   display: inline-block;
-
+  margin-right: 20px;
 }
 
 .social-btn {
