@@ -38,7 +38,8 @@ body {
   min-width: 768px;
   max-width: 1200px;
   padding: 0 40px;
-  background: #f2f2f2;
+  background-color: #f2f2f2;
+  margin: 0 auto;
 
 }
 
@@ -57,6 +58,7 @@ body {
 }
 
 .main-navigation {
+  width: 88%;
   margin: 0;
   padding: 0 6%;
 
@@ -82,11 +84,12 @@ body {
 
 .logo {
   position: absolute;
-  left: 530px;
+  left: 41%;
   top: -30px;
   z-index: 10;
 }
-
+/*конец шапки*/
+/*начало index.html*/
 .promo {
   position: relative;
   width: 100%;
@@ -209,7 +212,7 @@ body {
 }
 
 .map {
-
+  background: url("img/map.jpg");
 
 }
 
@@ -230,10 +233,129 @@ body {
   width: 100%;
   height: 60px;
 }
+/*конец index.html*/
+/*начало hotels.html*/
+.filter-hotels {
+  height: 215px;
+  width: 88%;
+  margin: 0;
+  padding: 30px 6%;
+  background: #4178a1 url("img/filter-bg.jpg") no-repeat center top;
+  color: #ffffff;
+  text-align: left;
 
+}
+
+.filter-hotels:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.filter-col {
+  float: left;
+  width: 150px;
+  margin-right: 30px;
+
+}
+
+.list-title {
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 30px;
+}
+
+#hotel {
+
+}
+
+.filter-range {
+ float: right;
+ width: 330px;
+}
+
+.range-controls {
+  margin-bottom: 20px;
+}
+
+.sorting {
+  background: #ffffff;
+  width: 88%;
+  margin: 0;
+  margin-bottom: 1px;
+  padding: 30px 6%;
+}
+
+.content-title {
+  float: left;
+  width: 20%;
+  font-size: 21px;
+  line-height: 26px;
+  margin-right: 30px;
+}
+
+.sorting-type {
+  float: left;
+  width: 80%;
+  font-size: 0;
+}
+
+.sorting-title {
+  float: left;
+  width: 80px;
+  font-size: 12px;
+  line-height: 18px;
+  margin-right: 30px;
+}
+
+.sorting-items {
+  float:left;
+  width: 100%;
+  font-size: 0;
+
+}
+
+.sorting-item {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  margin-right: 30px;
+}
+
+.sorting-abc {
+  float: right;
+  width: 35px;
+}
+.hotel {
+  padding: 30px 0;
+  background: #ffffff;
+  margin-bottom: 1px;
+  text-align: left;
+}
+
+.hotel-picture {
+  float: left;
+  width: 135px;
+  margin-right: 30px;
+}
+
+.rating {
+  float: right;
+  width: 110px;
+}
+
+
+/*конец hotels.html*/
+/*начало подвала*/
 .main-footer {
   padding: 35px 6%;
   font-size: 0;
+  background: #ffffff;
+}
+
+.main-footer-index {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .hashtag {
@@ -262,3 +384,4 @@ body {
   font-size: 14px;
 }
 /*отступы между тремя подразделами в футере в процентах задавать? если да, то как это считать*/
+/*конец подвала*/
