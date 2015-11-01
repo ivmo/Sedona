@@ -2,12 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>Sedona</title>
   </head>
   <body>
     <div class="main-container">
-      <header class="main-header clearfix">
+      <header class="main-header">
           <nav class="main-navigation">
             <figure class="logo">
               <a href="#">
@@ -68,7 +69,7 @@
           </section>
         </div>
 
-        <div class="reason ns-row reasons-row-image reasons-row-image-invert">
+        <div class="reasons-row reasons-row-image reasons-row-image-invert">
           <figure class="reason-picture">
             <img src="img/bridge1200.jpg" width="800" height="256" alt="мотель">
           </figure>
@@ -106,10 +107,10 @@
 
       <div class="map">
 
-        <div class="map-canvas"></div>
+        <div class="map-canvas"></div> <!-- зачем этот блок? -->
 
         <div class="form">
-          <form action="/echo" method="get">
+          <form action="/echo" method="post">
 
             <div class="form-row">
               <label for="date-in">Дата заезда:</label>
