@@ -1,50 +1,60 @@
 body {
   width: 100%;
+
   font-size: 14px;
-  line-height: 21px;
-  font-family: "PTSans regular" verdana sans-serif;
-  text-transform: uppercase;
-  color: #000000;
+  line-height: 26px;
+  font-family: "PTSans" sans-serif;
   text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+
+  background: #f2f2f2;
 }
+
 .reason-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+
   font-weight: bold;
   font-size: 21px;
-  font-family: "PTSans bold" verdana sans-serif;
+  line-height: 21px;
+  font-family: "PTSans bold" sans-serif;
   color: #000000;
-  margin-bottom: 30px;
 }
 
 .reasons-title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
   font-weight: bold;
   font-size: 21px;
-  font-family: "PTSans bold" verdana sans-serif;
+  font-family: "PTSans bold" sans-serif;
   color: #000000;
-  margin: 0;
-  padding: 60px;
-  margin-bottom: 30px;
 }
 
 .search-title {
   font-weight: bold;
   font-size: 30px;
-  line-height: 24px;
-  font-family: "PTSans bold" verdana sans-serif;
+  line-height: 30px;
+  font-family: "PTSans bold" sans-serif;
+  margin: 0;
+  margin-bottom: 30px;
   color: #000000;
 }
 
 .main-container {
-  width: 100%;
   min-width: 768px;
   max-width: 1200px;
-  padding: 0 40px;
-  background-color: #f2f2f2;
   margin: 0 auto;
-
+  padding: 0;
+  background: #ffffff;
 }
 
 .clearfix:after {
   content: "";
+
   display: table;
   clear: both;
 }
@@ -52,62 +62,84 @@ body {
 /*шапка начало*/
 .main-header {
   position: relative;
+
   margin: 0;
   padding: 0 70px;
-  background: #ffffff;
+
+
 }
 
 .main-navigation {
-  width: 88%;
+  width: 100%;
   margin: 0;
-  padding: 0 6%;
-
+  padding: 0;
 }
 
 .main-navigation ul {
   width: 100%;
+  margin: 0;
+  padding: 0;
   font-size: 0;
 }
 
 .main-navigation li {
   display: inline-block;
+  width: 20%;
+  vertical-align: middle;
+
   font-size: 14px;
-  color: #000000;
   line-height: 26px;
-  margin-right: 60px;
+  color: #000000;
 }
 
 .main-navigation a {
   display: block;
   padding: 15px 0;
+  text-decoration: none;
+  color: #000000;
+  font-family: "PTSans bold" sans-serif;
+  font-weight: bold;
 }
 
+.offset {
+  margin-right: 20%;
+}
 .logo {
   position: absolute;
-  left: 41%;
   top: -30px;
+  left: 41%;
   z-index: 10;
 }
 /*конец шапки*/
 /*начало index.html*/
 .promo {
   position: relative;
+  background-color: #b4c5d8;
+  background-image: url("../img/promo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 100%;
   width: 100%;
+  height: 510px;
   margin: 0;
   padding: 0;
-  height: 300px;
-  background: #ffffff;
-    /*как высоту задать? */
+
+}
+
+.promo:after {
+  content: "";
+
+  background-image: url("../img/white.png");
 }
 .promo img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 75px;
+  left: 31%;
+
   margin: 0;
 }
-/*как 3 картинки добавить? */
+
 .reasons {
-  background: #ffffff;
   margin: 0;
   padding: 0;
 
@@ -115,163 +147,187 @@ body {
 
 .reasons-header {
   width: 575px;
-  padding: 0 auto;
   margin: 0 auto;
-  line-height: 26px;
-
+  padding: 50px 0;
 }
 
+.reasons-header p {
+  padding: 0;
+  margin: 0;
+}
 .reasons-row {
   margin: 0;
   padding: 0;
 }
 
 .reasons-row-image {
-  background: #81b3d2;
   color: #ffffff;
-
+  background: #81b3d2;
 }
 
 .reasons-row:after {
   content: "";
+
   display: table;
   clear: both;
 }
 
 .reason {
   float: left;
-  /*или надо задавать максимальную и минимальную ширину всей строке?*/
-  min-width: 256px;
-  max-width: 400px;
   width: 33.333333%;
   margin: 0;
+  padding: 50px 0;
+}
+
+.reason p {
+  line-height: 21px;
+  margin: 0;
   padding: 0;
-  padding-top: 50px;
-  padding-bottom: 40px;
+}
+
+.reason-number {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .reason-picture {
   float: left;
-  min-width: 512px;
-  max-width: 800px;
   width: 66.666666%;
   margin: 0;
   padding: 0;
+
 }
 
 .reason-icon {
-  /*если иконки будут спозиционированны абсолютно, то падинги будут такие*/
-  padding-top: 164px;
-  padding-bottom: 65px;
+  padding-top: 160px;
+  padding-bottom: 85px;
 }
 
 .reason-icon-home {
-
+  background: url("../img/home.png") no-repeat 50% 60px;
 }
 
 .reason-icon-food {
-
+  background: url("../img/food.png") no-repeat 50% 60px;
 }
 
 .reason-icon-gift {
-
-}
-/*2 селектора ниже, чтоб инвертировать флоаты в строках с картинками, но я им обоим прописал флоат влево*/
-.reasons-row-image-invert .reason-picture {
-
-}
-
-.reasons-row-image-invert .reason {
-
+  background: url("../img/gift.png") no-repeat 50% 60px;
 }
 
 .reasons-row-gray {
   background: #eeeeee;
-}
-
-.reason-number {
-  margin-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .search {
-  background: #ffffff;
   margin: 0;
   padding: 0;
   padding-top: 60px;
+
+  background: #ffffff;
 }
 
-
+.search p {
+  margin: 0;
+  margin-bottom: 50px;
+  line-height: 21px;
+}
 
 .search-btn {
   display: block;
-  height: 85px;
   width: 575px;
+  height: 85px;
   margin: 0 auto;
+
   color: #ffffff;
+
   background: #766357;
 }
 
 .map {
-  background: url("img/map.jpg");
+  position: relative;
+  background: url("../img/map.jpg");
+}
 
+.map-canvas {
+  /*как растянуть картинку до конца страницы?*/
+  background: url("../img/map.jpg");
 }
 
 .form {
   width: 575px;
   margin: 0 auto;
-  padding-top: 65px;
-  padding-bottom: 55px;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding: 55px;
+  box-sizing: border-box;
   background-color: #ffffff;
+}
 
+.form-row {
+  margin-bottom: 30px;
+}
+
+.form-row:last-child {
+  margin-bottom: 55px;
+}
+
+.form-col {
+  float: left;
 }
 
 .btn-submit {
-  background: #81b3d2;
-  color: #ffffff;
   width: 100%;
   height: 60px;
+
+  color: #ffffff;
+
+  background: #81b3d2;
 }
 /*конец index.html*/
 /*начало hotels.html*/
 .filter-hotels {
+  width: 100%;
   height: 215px;
-  width: 88%;
   margin: 0;
-  padding: 30px 6%;
-  background: #4178a1 url("img/filter-bg.jpg") no-repeat center top;
-  color: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
   text-align: left;
+  color: #ffffff;
 
+  background: #40759f url("../img/filter-bg.jpg");
 }
 
 .filter-hotels:after {
   content: "";
+
   display: table;
   clear: both;
 }
 
 .filter-col {
   float: left;
-  width: 150px;
-  margin-right: 30px;
-
+  width: 240px;
 }
+
 
 .list-title {
+  margin-bottom: 30px;
+
   font-size: 16px;
   line-height: 21px;
-  margin-bottom: 30px;
 }
 
-#hotel {
 
-}
 
 .filter-range {
- float: right;
- width: 330px;
+  float: right;
+  width: 330px;
+  margin: 0;
+  padding: 0;
 }
 
 .range-controls {
@@ -279,48 +335,69 @@ body {
 }
 
 .sorting {
-  background: #ffffff;
-  width: 88%;
+  width: 100%;
   margin: 0;
   margin-bottom: 1px;
-  padding: 30px 6%;
+  padding: 30px 0;
+  text-align: left;
+  background: #ffffff;
+  font-size: 12px;
+  line-height: 18px;
+
 }
 
 .content-title {
   float: left;
-  width: 20%;
+  width: 15%;
+  padding: 0;
+  padding-left: 30px;
+  margin: 0;
+  font-family: "PTSans bold";
+  font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  margin-right: 30px;
 }
 
 .sorting-type {
   float: left;
   width: 80%;
+  line-height: 26px;
   font-size: 0;
 }
 
 .sorting-title {
-  float: left;
-  width: 80px;
-  font-size: 12px;
-  line-height: 18px;
+  display: inline-block;
   margin-right: 30px;
+  vertical-align: bottom;
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .sorting-items {
-  float:left;
-  width: 100%;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0;
+  padding: 0;
   font-size: 0;
-
 }
 
 .sorting-item {
   display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 18px;
   margin-right: 30px;
+  vertical-align: bottom;
+  font-size: 12px;
+}
+
+.sorting-link {
+  text-decoration: none;
+  border-bottom: 1px dotted #81b3d2;
+  color: #b1b1b1;
+
+}
+
+.current-sorting-link {
+  color: #81b3d2;
+  border-bottom: none;
 }
 
 .sorting-abc {
@@ -328,16 +405,19 @@ body {
   width: 35px;
 }
 .hotel {
-  padding: 30px 0;
-  background: #ffffff;
   margin-bottom: 1px;
+  padding: 30px 0;
+
   text-align: left;
+
+  background: #ffffff;
 }
 
 .hotel-picture {
+  padding: 0;
+  margin: 0 30px;
   float: left;
   width: 135px;
-  margin-right: 30px;
 }
 
 .rating {
@@ -345,42 +425,111 @@ body {
   width: 110px;
 }
 
+.hotel {
+  padding: 0;
+  margin: 0;
+
+}
+
+.hotel-content {
+  font-size: 0;
+}
+
+.hotel-title {
+  font-size: 21px;
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.hotel-btn {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 14px;
+  margin-right: 5px;
+
+}
+
+.btn {
+  display: block;
+  height: 35px;
+  color: #ffffff;
+  line-height: 30px;
+  font-family: "PTSant bold" sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+.btn-blue{
+  background: #81b3d2;
+}
+
+.btn-brown {
+  background: #766357;
+}
+
+
 
 /*конец hotels.html*/
 /*начало подвала*/
 .main-footer {
-  padding: 35px 6%;
+  padding: 35px 0;
+  vertical-align: middle;
   font-size: 0;
+
   background: #ffffff;
 }
 
 .main-footer-index {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .hashtag {
+  margin-right: 20%;
+  text-decoration: none;
+  color: #000000;
+  font-family: "PT Sans Bold" sans-serif;
+  font-weight: bold;
   font-size: 14px;
-  margin-right: 20px;
 }
+
 .social {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 20%;
+  vertical-align: top;
 }
 
 .social-btn {
   display: inline-block;
-  font-size: 14px;
   width: 45px;
   height: 45px;
   margin-right: 5px;
+  /*как текст ссылки сдвинуть за границу блока, чтоб его не было видно?*/
+  font-size: 14px;
 }
 
 .social-btn:last-child {
   margin-right: 0;
 }
 
+.social-btn-tw {
+  background: #81b3d2 url("../img/tw.png") no-repeat 50% 50%;
+}
+
+.social-btn-fb {
+  background: #81b3d2 url("../img/fb.png") no-repeat 50% 50%;
+}
+
+.social-btn-ytb {
+  background: #81b3d2 url("../img/ytb.png") no-repeat 50% 50%;
+}
+
 .author {
   display: inline-block;
+
   font-size: 14px;
 }
 /*отступы между тремя подразделами в футере в процентах задавать? если да, то как это считать*/
