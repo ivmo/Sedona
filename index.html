@@ -18,7 +18,7 @@
             </figure>
             <ul>
               <li>
-                <a href="#" class="active">информация</a>
+                <a href="#">информация</a>
               </li>
               <li class="offset">
                 <a href="#">фото и видео</a>
@@ -27,7 +27,7 @@
                 <a href="#">карта штата</a>
               </li>
               <li>
-                <a href="#">гостиницы</a>
+                <a href="hotels.html">гостиницы</a>
               </li>
             </ul>
           </nav>
@@ -35,7 +35,6 @@
 
       <div class="promo">
         <img src="img/text.png" width="" height="" alt="sedona">
-        <img src="" width="" height="">
       </div>
 
       <article class="reasons">
@@ -46,10 +45,10 @@
         </header>
 
         <div class="reasons-row reasons-row-image">
-          <section class="reason">
-            <h2 class="reason-title reasons-row-image">Настоящий<br>городок</h2>
+          <section class="reason white-color">
+            <h2 class="reason-title white-color">Настоящий<br>городок</h2>
             <div class="reason-number">- №1 -</div>
-            <p>седона - не аттракцион для туристов,<br>там течет своя жизнь</p>
+            <p>седона - не аттракцион для туристов, там течет своя жизнь</p>
           </section>
           <figure class="reason-picture">
             <img src="img/hotel.jpg" width="800" height="256" alt="отель">
@@ -71,12 +70,12 @@
           </section>
         </div>
 
-        <div class="reasons-row reasons-row-image reasons-row-image-invert">
+        <div class="reasons-row reasons-row-image">
           <figure class="reason-picture">
             <img src="img/bridge.jpg" width="800" height="256" alt="мотель">
           </figure>
-          <section class="reason">
-            <h2 class="reason-title reasons-row-image">Там есть<br>мост дьявола</h2>
+          <section class="reason white-color">
+            <h2 class="reason-title white-color">Там есть<br>мост дьявола</h2>
             <div class="reason-number">- №2 -</div>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </section>
@@ -96,7 +95,7 @@
           <section class="reason">
             <h2 class="reason-title">Мало <br>туристов</h2>
             <div class="reason-number">- №5 -</div>
-            <p>Большинство едет в гранд каньон и <br>толпится там</p>
+            <p>Большинство едет в гранд каньон и толпится там</p>
           </section>
         </div>
       </article>
@@ -114,49 +113,58 @@
         <div class="form">
           <form action="/echo" method="post">
 
-            <div class="form-row">
+            <div class="form-row clearfix">
               <label for="date-in">Дата заезда:</label>
-              <input type="date" name="date-in" id="date-in">
+              <input type="text" name="date-in" id="date-in">
             </div>
 
-            <div class="form-row">
+            <div class="form-row clearfix">
               <label for="date-out">Дата выезда:</label>
-              <input type="date" name="date-out" id="date-out">
+              <input type="text" name="date-out" id="date-out">
             </div>
 
-            <div class="form-row">
+            <div class="form-row clearfix">
               <div class="form-col">
-                <label for="ad">Взрослые:</label>
+                <label for="man">Взрослые:</label>
                 <div class="counter">
-                  <button class="counter-btn"><i class="ico-minus"></i></button>
-                  <input type="text" name="ad" id="ad">
-                  <button class="counter-btn"><i class="ico-plus"></i></button>
+                  <button class="counter-btn"><i class="icon-minus"></i></button>
+                  <input type="text" name="man" id="man">
+                  <button class="counter-btn"><i class="icon-plus"></i></button>
                 </div>
               </div>
-              <div class="form-col">
+              <div class="form-col-right">
                 <label for="child">Дети:</label>
                 <div class="counter">
-                  <button class="counter-btn"><i class="ico-minus"></i></button>
+                  <button class="counter-btn"><i class="icon-minus"></i></button>
                   <input type="text" name="child" id="child">
-                  <button class="counter-btn"><i class="ico-plus"></i></button>
+                  <button class="counter-btn"><i class="icon-plus"></i></button>
                 </div>
               </div>
             </div>
 
-            <button class="btn btn-submit" type="submit">Найти</button>
+            <button class="btn-submit" type="submit">Найти</button>
           </form>
         </div>
 
         <footer class="main-footer .main-footer-index">
           <a href="#" class="hashtag">#visitsedona</a>
           <div class="social">
-            <a href="#" class="social-btn social-btn-tw">Твиттер</a>
-            <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
-            <a href="#" class="social-btn social-btn-ytb">ютуб</a>
+            <a href="#" class="social-btn icon-twitter"></a>
+            <a href="#" class="social-btn icon-facebook"></a>
+            <a href="#" class="social-btn icon-youtube"></a>
           </div>
-          <div class="author">website by <a href="#"><img src="img/htmlac.png" width="" height="" alt="HTML Academy"></a></div>
+          <div class="author">website by<a href="#"></a></div>
         </footer>
       </div>
     </div>
+    <script>
+      var link = document.querySelector(".search-btn");
+      var popup = document.querySelector(".modal-content");
+      var close = document.querySelector(".modal-content-close");
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-content-show");
+      });
+    </script>
   </body>
 </html>

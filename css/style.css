@@ -1,9 +1,73 @@
+@font-face {
+  font-family: 'symbols-sedona';
+  src: url('../font/symbols-sedona.eot?60737633');
+  src: url('../font/symbols-sedona.eot?60737633#iefix') format('embedded-opentype'),
+       url('../font/symbols-sedona.woff?60737633') format('woff'),
+       url('../font/symbols-sedona.ttf?60737633') format('truetype'),
+       url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'symbols-sedona';
+    src: url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
+  }
+}
+*/
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "symbols-sedona";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-facebook:before { content: '\66'; } /* 'f' */
+.icon-twitter:before { content: '\74'; } /* 't' */
+.icon-up-dir:before { content: '\25b2'; } /* '▲' */
+.icon-down-dir:before { content: '\25bc'; } /* '▼' */
+.icon-star:before { content: '\2605'; } /* '★' */
+.icon-check-off:before { content: '\2610'; } /* '☐' */
+.icon-check-on:before { content: '\2611'; } /* '☑' */
+.icon-calendar:before { content: '\e800'; } /* '' */
+.icon-plus:before { content: '\e801'; } /* '' */
+.icon-minus:before { content: '\e802'; } /* '' */
+.icon-youtube:before { content: '\f39e'; } /* '' */
+
 body {
   width: 100%;
 
   font-size: 14px;
   line-height: 26px;
-  font-family: "PTSans" sans-serif;
+  font-family: "PT Sans" sans-serif;
   text-align: center;
   color: #000000;
   text-transform: uppercase;
@@ -12,14 +76,14 @@ body {
 }
 
 .reason-title {
-  padding: 0;
   margin: 0;
   margin-bottom: 25px;
+  padding: 0;
 
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
-  font-family: "PTSans bold" sans-serif;
+  font-family: "PT Sans" sans-serif;
   color: #000000;
 }
 
@@ -30,17 +94,18 @@ body {
 
   font-weight: bold;
   font-size: 21px;
-  font-family: "PTSans bold" sans-serif;
+  font-family: "PT Sans" sans-serif;
   color: #000000;
 }
 
 .search-title {
+  margin: 0;
+  margin-bottom: 30px;
+
   font-weight: bold;
   font-size: 30px;
   line-height: 30px;
-  font-family: "PTSans bold" sans-serif;
-  margin: 0;
-  margin-bottom: 30px;
+  font-family: "PT Sans" sans-serif;
   color: #000000;
 }
 
@@ -49,7 +114,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
-  background: #ffffff;
+
+  box-shadow: 0 0 10px 5px #dbdbdb;
 }
 
 .clearfix:after {
@@ -64,9 +130,9 @@ body {
   position: relative;
 
   margin: 0;
-  padding: 0 70px;
+  padding: 0 6%;
 
-
+  background: #ffffff;
 }
 
 .main-navigation {
@@ -79,26 +145,54 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  text-align: left;
   font-size: 0;
 }
 
 .main-navigation li {
   display: inline-block;
   width: 20%;
-  vertical-align: middle;
 
+  padding: 0;
   font-size: 14px;
   line-height: 26px;
+  vertical-align: middle;
   color: #000000;
+}
+
+.main-navigation li:nth-child(2),
+.main-navigation li:nth-child(4) {
+  text-align: right;
 }
 
 .main-navigation a {
   display: block;
   padding: 15px 0;
-  text-decoration: none;
-  color: #000000;
-  font-family: "PTSans bold" sans-serif;
+  margin: 0;
   font-weight: bold;
+  font-family: "PT Sans" sans-serif;
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-navigation a:hover {
+  color: #81b3d2;
+}
+
+.main-navigation a:active {
+  color: #b2b2b2;
+}
+
+.main-navigation .active {
+  color: #766357;
+}
+
+.main-navigation .active:hover {
+  color: #604e43;
+}
+
+.main-navigation .active:active {
+  color: #d6d0cc;
 }
 
 .offset {
@@ -106,30 +200,44 @@ body {
 }
 .logo {
   position: absolute;
-  top: -30px;
+  top: -15px;
   left: 41%;
   z-index: 10;
+}
+
+.logo a {
+  padding: 0;
+  margin: 0;
 }
 /*конец шапки*/
 /*начало index.html*/
 .promo {
   position: relative;
-  background-color: #b4c5d8;
-  background-image: url("../img/promo.jpg");
-  background-size: cover;
-  background-repeat: no-repeat, no-repeat;
-  background-position: 0 0, 0 100%;
+
   width: 100%;
   height: 510px;
   margin: 0;
   padding: 0;
 
+  background-color: #b4c5d8;
+  background-image: url("../img/promo.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
 }
 
 .promo:after {
   content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
-  background-image: url("../img/white.png");
+  display: block;
+  width: 100%;
+  height: 57px;
+
+  background: url("../img/white.png") no-repeat;
+  background-size: 100% 57px;
 }
 .promo img {
   position: absolute;
@@ -139,10 +247,13 @@ body {
   margin: 0;
 }
 
+
+
 .reasons {
   margin: 0;
   padding: 0;
 
+  background: #ffffff;
 }
 
 .reasons-header {
@@ -152,17 +263,21 @@ body {
 }
 
 .reasons-header p {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
+
 .reasons-row {
   margin: 0;
   padding: 0;
 }
 
 .reasons-row-image {
-  color: #ffffff;
+  height: 256px;
+  overflow: hidden;
+
   background: #81b3d2;
+  /*почему если удалить оверфлоу то последня строчка с ризонами поломается?*/
 }
 
 .reasons-row:after {
@@ -170,6 +285,10 @@ body {
 
   display: table;
   clear: both;
+}
+
+.white-color {
+  color: #ffffff;
 }
 
 .reason {
@@ -180,15 +299,16 @@ body {
 }
 
 .reason p {
-  line-height: 21px;
-  margin: 0;
+  margin: 0 15%;
   padding: 0;
+
+  line-height: 21px;
 }
 
 .reason-number {
-  padding: 0;
   margin: 0;
   margin-bottom: 25px;
+  padding: 0;
 }
 
 .reason-picture {
@@ -197,6 +317,7 @@ body {
   margin: 0;
   padding: 0;
 
+  background-size: cover;
 }
 
 .reason-icon {
@@ -217,8 +338,9 @@ body {
 }
 
 .reasons-row-gray {
-  background: #eeeeee;
   padding-bottom: 10px;
+
+  background: #eeeeee;
 }
 
 .search {
@@ -232,40 +354,99 @@ body {
 .search p {
   margin: 0;
   margin-bottom: 50px;
+
   line-height: 21px;
 }
 
 .search-btn {
   display: block;
+  box-sizing: border-box;
   width: 575px;
   height: 85px;
   margin: 0 auto;
+  padding: 32px 0;
 
+  font-weight: bold;
+  font-size: 21px;
   color: #ffffff;
+  text-decoration: none;
 
   background: #766357;
 }
 
 .map {
   position: relative;
+
+  width: 100%;
+  height: 100%;
+
   background: url("../img/map.jpg");
 }
 
 .map-canvas {
-  /*как растянуть картинку до конца страницы?*/
+  width: 100%;
+  height: 100%;
+
   background: url("../img/map.jpg");
 }
 
 .form {
+  box-sizing: border-box;
   width: 575px;
+  height: 400px;
   margin: 0 auto;
   padding: 55px;
-  box-sizing: border-box;
+
+  font-weight: bold;
+
   background-color: #ffffff;
 }
 
 .form-row {
+  margin: 0 auto;
   margin-bottom: 30px;
+  padding: 0;
+
+  text-align: left;
+}
+
+.form-row label {
+  line-height: 55px;
+}
+
+.form-row input[name="date-in"],
+.form-row input[name="date-out"] {
+  position: relative;
+
+  float: right;
+  box-sizing: border-box;
+  width: 340px;
+  margin-left: 15px;
+  padding: 15px;
+  padding-right: 10px;
+
+  background: #f2f2f2;
+  border: none;
+  outline: none;
+}
+
+.form-row input[name="date-in"]::after,
+.form-row input[name="date-out"]::after {
+  content: "\e800";
+
+}
+
+.form-row input[name="date-in"]:hover,
+.form-row input[name="date-out"]:hover {
+  background: #ebebeb;
+}
+
+.form-row input[name="date-in"]:focus,
+.form-row input[name="date-out"]:focus {
+  padding: 13px;
+
+  background: #ffffff;
+  border: 2px solid #e5e5e5;
 }
 
 .form-row:last-child {
@@ -274,34 +455,107 @@ body {
 
 .form-col {
   float: left;
+  width: 240px;
+
+  text-align: left;
+}
+
+.form-col label {
+  margin-right: 50px;
+}
+
+.form-col-right {
+  float: right;
+  width: 220px;
+
+  text-align: right;
+}
+
+.form-col-right label {
+  margin-right: 30px;
+}
+
+.counter {
+  display: inline-block;
+
+  vertical-align: baseline;
+
+  background: #f2f2f2;
+}
+
+.counter input[name="man"],
+.counter input[name="child"] {
+  box-sizing: border-box;
+  width: 40px;
+  padding: 15px 0;
+
+  text-align: center;
+
+  background: #f2f2f2;
+  border: none;
+  outline: none;
+}
+
+.counter-btn {
+  background: #f2f2f2;
+  border: none;
+}
+
+.counter-btn i {
+  color: #a9a9a9;
+}
+
+.counter-btn i:hover {
+  color: #000000;
+}
+
+.counter-btn i:active {
+  color: #81b3d2;
 }
 
 .btn-submit {
   width: 100%;
   height: 60px;
+  margin: 0;
+  padding: 0;
 
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
   color: #ffffff;
+  text-transform: uppercase;
 
   background: #81b3d2;
+  border: none;
+  outline: none;
+}
+
+.btn-submit:hover {
+  background: #669ec0;
+}
+
+.btn-submit:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background: #5496bd;
 }
 /*конец index.html*/
 /*начало hotels.html*/
 .filter-hotels {
-  width: 100%;
-  height: 215px;
-  margin: 0;
-  padding-top: 30px;
-  padding-bottom: 35px;
-  padding-left: 10%;
-  padding-right: 10%;
   box-sizing: border-box;
+  width: 100%;
+  height: 220px;
+  margin: 0;
+  padding: 30px 6%;
+
   text-align: left;
   color: #ffffff;
 
-  background: #40759f url("../img/filter-bg.jpg");
+  background: #40759f url("../img/filter-bg.jpg") no-repeat center;
+  background-size: cover;
 }
 
-.filter-hotels:after {
+.filter-hotels::after {
   content: "";
 
   display: table;
@@ -310,103 +564,299 @@ body {
 
 .filter-col {
   float: left;
-  width: 240px;
+  min-width: 210px;
+  width: 30%;
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
 }
 
+.filter-col input[type="checkbox"] {
+  display: none;
+}
+
+.filter-col input[type="checkbox"] + label {
+  display: inline-block;
+  margin: 0;
+  margin-right: 75px;
+  margin-bottom: 25px;
+  padding: 0;
+
+  font-size: 14px;
+}
+
+.filter-col input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+
+.filter-col input[type="checkbox"] + label::before {
+  content: "\2610";
+
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+  margin: 0;
+  margin-right: 15px;
+  padding: 0;
+  font-size: 25px;
+}
+
+.filter-col input[type="checkbox"]:checked + label::before {
+  content: "\2611";
+
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+  margin: 0;
+  margin-right: 15px;
+  padding: 0;
+
+  font-size: 25px;
+}
 
 .list-title {
-  margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
 
   font-size: 16px;
-  line-height: 21px;
+  line-height: 16px;
 }
-
-
 
 .filter-range {
   float: right;
-  width: 330px;
+  min-width: 220px;
+  width: 30%;
   margin: 0;
   padding: 0;
+}
+
+.price-controls {
+  height: 32px;
+  border: 2px solid white;
+  background: none;
+  margin: 0;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 14px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.price-controls input {
+
+  width: 40%;
+
+  background: none;
+  border: none;
+}
+
+.table-price {
+  width: 100%
+  margin: 0;
+  padding: 0;
+}
+
+.td-price {
+  padding-left: 5px;
+  border-collapse: collapse;
+}
+
+.td-price:last-child {
+  padding-left: 5px;
+  border-left: 2px solid white;
+
 }
 
 .range-controls {
-  margin-bottom: 20px;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.scale{
+    margin-top: 19px;
+    height: 2px;
+    background: #8e8180;
+}
+.bar{
+    width: 85%;
+    height: 2px;
+    background: #ffffff;
+}
+.toggle{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border: 8px solid white;
+    background: #ababab;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.toggle:hover {
+    background: #1c4f80;
+}
+
+.min-toggle{
+    left: 0;
+}
+.max-toggle{
+    left: 85%;
+}
+
+.btn-filter-search {
+  width: 135px;
+  height: 30px;
+  line-height: 21px;
+  font-size: 14px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background: none;
+  border: 2px solid white;
+  margin: 0;
+  margin-left: 25%;
+  padding: 0;
 }
 
 .sorting {
-  width: 100%;
   margin: 0;
   margin-bottom: 1px;
-  padding: 30px 0;
-  text-align: left;
-  background: #ffffff;
+  padding: 30px 6%;
+
   font-size: 12px;
   line-height: 18px;
+  text-align: left;
 
-}
-
-.content-title {
-  float: left;
-  width: 15%;
-  padding: 0;
-  padding-left: 30px;
-  margin: 0;
-  font-family: "PTSans bold";
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
+  background: #ffffff;
 }
 
 .sorting-type {
   float: left;
-  width: 80%;
-  line-height: 26px;
+  width: 90%;
+
   font-size: 0;
+  line-height: 26px;
+}
+
+.content-title {
+  display: inline-block;
+  vertical-align: bottom;
+  min-width: 125px;
+  width: 15%;
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  font-family: "PT Sans" sans-serif;
 }
 
 .sorting-title {
   display: inline-block;
   margin-right: 30px;
-  vertical-align: bottom;
+
   font-weight: bold;
   font-size: 12px;
+  vertical-align: bottom;
 }
 
 .sorting-items {
   display: inline-block;
-  vertical-align: bottom;
   margin: 0;
   padding: 0;
+
   font-size: 0;
+  vertical-align: bottom;
 }
 
 .sorting-item {
   display: inline-block;
   margin-right: 30px;
-  vertical-align: bottom;
+
   font-size: 12px;
+  vertical-align: bottom;
 }
 
 .sorting-link {
-  text-decoration: none;
-  border-bottom: 1px dotted #81b3d2;
   color: #b1b1b1;
+  text-decoration: none;
 
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sorting-link:hover {
+  color: #81b3d2;
+}
+
+.sorting-link:active {
+  color: #000000;
+  border-bottom: none;
 }
 
 .current-sorting-link {
   color: #81b3d2;
+
   border-bottom: none;
 }
 
 .sorting-abc {
   float: right;
-  width: 35px;
+  text-align: right;
+  width: 10%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
 }
+
+.sorting-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  margin: 5px;
+  padding: 0;
+  color: #cccccc;
+}
+
+.sorting-active {
+  color: #81b3d2;
+}
+.icon-up-dir {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    font-size: 26px;
+    line-height: 26px;
+}
+
+.icon-down-dir {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.sorting-icon:hover {
+  color: #000000;
+}
+
+.sorting-icon:active {
+  color: #81b3d2;
+}
+
+
 .hotel {
   margin-bottom: 1px;
-  padding: 30px 0;
+  padding: 30px 6%;
 
   text-align: left;
 
@@ -414,71 +864,124 @@ body {
 }
 
 .hotel-picture {
-  padding: 0;
-  margin: 0 30px;
+  display: block;
   float: left;
   width: 135px;
+  margin: 0;
+  margin-right: 30px;
+  padding: 0;
 }
 
 .rating {
   float: right;
   width: 110px;
-}
-
-.hotel {
-  padding: 0;
   margin: 0;
+  padding: 0;
 
+  text-align: right;
 }
 
+.rating-stars {
+  /*background: url("../img/star.jpg");*/
+  color: #81b3d2;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.rating-text {
+  width: 110px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 30px;
+  vertical-align: baseline;
+  color: #666666;
+
+  background: #f2f2f2;
+}
 .hotel-content {
   font-size: 0;
+
 }
 
 .hotel-title {
+  display: block;
+  margin: 0;
+  /*margin-left: 155px;*/
+  margin-bottom: 10px;
+  padding: 0;
+  text-decoration: none;
   font-size: 21px;
   line-height: 21px;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.hotel-title:hover {
+  color: #81b3d2;
+}
+
+.hotel-title:active {
+  color: #cacaca;
 }
 
 .hotel-btn {
   display: inline-block;
-  font-size: 14px;
-  line-height: 14px;
   margin-right: 5px;
 
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .btn {
   display: block;
-  height: 35px;
-  color: #ffffff;
-  line-height: 30px;
-  font-family: "PTSant bold" sans-serif;
-  font-weight: bold;
-  text-decoration: none;
+  height: 30px;
+  margin-top: 15px;
   padding: 0 20px;
-  margin-top: 10px;
+
+  font-weight: bold;
+  line-height: 30px;
+  font-family: "PT Sans" sans-serif;
+  vertical-align: baseline;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.btn-blue{
+.btn-blue {
   background: #81b3d2;
+}
+
+.btn-blue:hover {
+  background: #669ec0;
+}
+
+.btn-blue:active {
+  background: #5496bd;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-brown {
   background: #766357;
 }
 
+.btn-brown:hover {
+  background: #604e43;
+}
 
+.btn-brown:active {
+  background: #503e33;
+  color: rgba(255, 255, 255, 0.5);
+}
 
 /*конец hotels.html*/
 /*начало подвала*/
 .main-footer {
-  padding: 35px 0;
-  vertical-align: middle;
+  padding: 35px 6%;
+
   font-size: 0;
+  /*vertical-align: middle;*/
+  text-align: center;
 
   background: #ffffff;
 }
@@ -488,18 +991,24 @@ body {
 }
 
 .hashtag {
+  display: inline-block;
+  width: 20%;
   margin-right: 20%;
-  text-decoration: none;
-  color: #000000;
-  font-family: "PT Sans Bold" sans-serif;
+
   font-weight: bold;
-  font-size: 14px;
+  font-size: 21px;
+  font-family: "PT Sans" sans-serif;
+  vertical-align: middle;
+  color: #000000;
+  text-decoration: none;
 }
 
 .social {
   display: inline-block;
-  margin-right: 20%;
-  vertical-align: top;
+  width: 20%;
+  margin-right: 15%;
+
+  vertical-align: middle;
 }
 
 .social-btn {
@@ -508,29 +1017,86 @@ body {
   height: 45px;
   margin-right: 5px;
   /*как текст ссылки сдвинуть за границу блока, чтоб его не было видно?*/
-  font-size: 14px;
+
+  font-size: 18px;
+  line-height: 45px;
+  vertical-align: middle;
 }
 
 .social-btn:last-child {
   margin-right: 0;
 }
 
-.social-btn-tw {
-  background: #81b3d2 url("../img/tw.png") no-repeat 50% 50%;
+.icon-twitter,
+.icon-facebook,
+.icon-youtube {
+  background: #81b3d2;
+  color: #ffffff;
 }
 
-.social-btn-fb {
-  background: #81b3d2 url("../img/fb.png") no-repeat 50% 50%;
+.icon-twitter:hover,
+.icon-facebook:hover,
+.icon-youtube:hover {
+  background-color: #669ec0;
 }
 
-.social-btn-ytb {
-  background: #81b3d2 url("../img/ytb.png") no-repeat 50% 50%;
+.icon-twitter:active,
+.icon-facebook:active,
+.icon-youtube:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #5496bd;
 }
 
 .author {
   display: inline-block;
 
   font-size: 14px;
+  font-family: "PT Sans" sans-serif;
+  vertical-align: middle;
+}
+
+.author a {
+  display: inline-block;
+  width: 113px;
+  height: 39px;
+  margin-left: 10px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-position: -5px -103px;
+}
+
+.author a:hover {
+  background-position: -5px -54px;
+}
+
+.author a:active {
+  background-position: -5px -5px;
+}
+
+.sprite {
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-html1 {
+    width: 113px;
+    height: 39px;
+    background-position: -5px -5px;
+}
+
+.sprite-html2 {
+    width: 113px;
+    height: 39px;
+    background-position: -5px -54px;
+}
+
+.sprite-html3 {
+    width: 113px;
+    height: 39px;
+    background-position: -5px -103px;
 }
 /*отступы между тремя подразделами в футере в процентах задавать? если да, то как это считать*/
 /*конец подвала*/
