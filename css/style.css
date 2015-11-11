@@ -52,15 +52,15 @@
 
 .icon-facebook:before { content: '\66'; } /* 'f' */
 .icon-twitter:before { content: '\74'; } /* 't' */
-.icon-up-dir:before { content: '\25b2'; } /* 'â–²' */
-.icon-down-dir:before { content: '\25bc'; } /* 'â–¼' */
-.icon-star:before { content: '\2605'; } /* 'â˜…' */
-.icon-check-off:before { content: '\2610'; } /* 'â˜' */
-.icon-check-on:before { content: '\2611'; } /* 'â˜‘' */
-.icon-calendar:before { content: '\e800'; } /* 'î €' */
-.icon-plus:before { content: '\e801'; } /* 'î ' */
-.icon-minus:before { content: '\e802'; } /* 'î ‚' */
-.icon-youtube:before { content: '\f39e'; } /* 'ïŽž' */
+.icon-up-dir:before { content: '\25b2'; } /* '▲' */
+.icon-down-dir:before { content: '\25bc'; } /* '▼' */
+.icon-star:before { content: '\2605'; } /* '★' */
+.icon-check-off:before { content: '\2610'; } /* '☐' */
+.icon-check-on:before { content: '\2611'; } /* '☑' */
+.icon-calendar:before { content: '\e800'; } /* '' */
+.icon-plus:before { content: '\e801'; } /* '' */
+.icon-minus:before { content: '\e802'; } /* '' */
+.icon-youtube:before { content: '\f39e'; } /* '' */
 
 body {
   width: 100%;
@@ -75,19 +75,32 @@ body {
 
 .reason-title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding: 0;
 
   font-weight: bold;
   font-size: 21px;
-  line-height: 21px;
+  line-height: 24px;
+  font-family: "PT Sans" sans-serif;
+  color: #000000;
+}
+
+.reasons-row-gray .reason-title,
+.reasons-row-image .reason-title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 24px;
   font-family: "PT Sans" sans-serif;
   color: #000000;
 }
 
 .reasons-title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 0;
 
   font-weight: bold;
@@ -111,7 +124,6 @@ body {
   min-width: 768px;
   max-width: 1200px;
   margin: 0 auto;
-  /* padding: 0; */
   box-shadow: 0 0 10px 5px #dbdbdb;
 }
 
@@ -122,18 +134,15 @@ body {
   clear: both;
 }
 
-/*ÑˆÐ°Ð¿ÐºÐ° Ð½Ð°Ñ‡Ð°Ð»Ð¾*/
+/*start header*/
 .main-header {
   position: relative;
-  /* margin: 0; */
   padding: 0 6%;
   background: #ffffff;
 }
 
 .main-navigation {
   width: 100%;
-  /* margin: 0; */
-  /* padding: 0; */
 }
 
 .main-navigation ul {
@@ -155,7 +164,12 @@ body {
   color: #000000;
 }
 
-.main-navigation li:nth-child(3), .main-navigation li:nth-child(4) {
+.main-navigation li:nth-child(2),
+.main-navigation li:nth-child(3) {
+  text-align: center;
+}
+
+.main-navigation li:nth-child(4) {
   text-align: right;
 }
 
@@ -192,6 +206,7 @@ body {
 .offset {
   margin-right: 20%;
 }
+
 .logo {
   position: absolute;
   top: 0;
@@ -205,14 +220,13 @@ body {
   padding: 0;
   margin: 0;
 }
-/*ÐºÐ¾Ð½ÐµÑ† ÑˆÐ°Ð¿ÐºÐ¸*/
-/*Ð½Ð°Ñ‡Ð°Ð»Ð¾ index.html*/
+/*end header*/
+
+/*start index.html*/
 .promo {
   position: relative;
   width: 100%;
   height: 510px;
-  /* margin: 0; */
-  /* padding: 0; */
   background-color: #b4c5d8;
   background-image: url("../img/promo.jpg");
   background-repeat: no-repeat;
@@ -241,28 +255,24 @@ body {
   margin: 0;
 }
 
-
-
 .reasons {
-  /* margin: 0; */
-  /* padding: 0; */
   background: #ffffff;
 }
 
 .reasons-header {
   width: 575px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 60px 0 50px 0;
 }
 
 .reasons-header p {
+  line-height: 27px;
   margin: 0;
   padding: 0;
 }
 
 .reasons-row {
-  /* margin: 0; */
-  /* padding: 0; */
+
 }
 
 .reasons-row-image {
@@ -270,7 +280,6 @@ body {
   overflow: hidden;
 
   background: #81b3d2;
-  /*Ð¿Ð¾Ñ‡ÐµÐ¼Ñƒ ÐµÑÐ»Ð¸ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ Ð¾Ð²ÐµÑ€Ñ„Ð»Ð¾Ñƒ Ñ‚Ð¾ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½Ñ ÑÑ‚Ñ€Ð¾Ñ‡ÐºÐ° Ñ Ñ€Ð¸Ð·Ð¾Ð½Ð°Ð¼Ð¸ Ð¿Ð¾Ð»Ð¾Ð¼Ð°ÐµÑ‚ÑÑ?*/
 }
 
 .reasons-row:after {
@@ -280,27 +289,31 @@ body {
   clear: both;
 }
 
-.white-color {
+.main-container .white-color {
   color: #ffffff;
 }
 
 .reason {
   float: left;
   width: 33.333333%;
-  /* margin: 0; */
-  padding: 50px 0;
+  padding: 55px 0;
+}
+
+.reasons-row-gray .reason {
+  float: left;
+  width: 33.333333%;
+  padding: 47px 0 55px 0;
 }
 
 .reason p {
   margin: 0 15%;
   padding: 0;
-
   line-height: 21px;
 }
 
 .reason-number {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   padding: 0;
 }
 
@@ -310,7 +323,6 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  /* background-size: cover; */
 }
 
 .reason-icon {
@@ -337,9 +349,7 @@ body {
 }
 
 .search {
-  /* margin: 0; */
-  /* padding: 0; */
-  padding-top: 60px;
+  padding-top: 55px;
   background: #ffffff;
 }
 
@@ -368,9 +378,7 @@ body {
 
 .map {
   position: relative;
-  /* width: 100%; */
   height: 600px;
-  /* background: url("../img/map.jpg"); */
 }
 
 .map-canvas {
@@ -395,16 +403,22 @@ body {
   z-index: 20;
 }
 
-.form-row {
+.form-row,
+.form-last-row {
+  position: relative;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   padding: 0;
 
   text-align: left;
 }
 
+.form-last-row {
+  margin-bottom: 55px;
+}
+
 .form-row label {
-  line-height: 55px;
+  line-height: 40px;
 }
 
 .form-row input[name="date-in"],
@@ -415,18 +429,23 @@ body {
   box-sizing: border-box;
   width: 340px;
   margin-left: 15px;
-  padding: 15px;
-  padding-right: 10px;
+  padding: 10px;
 
   background: #f2f2f2;
   border: none;
   outline: none;
 }
 
-.form-row input[name="date-in"]::after,
-.form-row input[name="date-out"]::after {
+.form-row::after {
   content: "\e800";
-
+  position: absolute;
+  font-family: "symbols-sedona";
+  right: 15px;
+  top: 5px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #a9a9a9;
+  outline: none;
 }
 
 .form-row input[name="date-in"]:hover,
@@ -480,7 +499,7 @@ body {
 .counter input[name="child"] {
   box-sizing: border-box;
   width: 40px;
-  padding: 15px 0;
+  padding: 10px 0;
 
   text-align: center;
 
@@ -492,16 +511,19 @@ body {
 .counter-btn {
   background: #f2f2f2;
   border: none;
+  outline: none;
 }
 
 .counter-btn i {
   color: #a9a9a9;
 }
 
+.form-row:hover::after,
 .counter-btn i:hover {
   color: #000000;
 }
 
+.form-row:active::after
 .counter-btn i:active {
   color: #81b3d2;
 }
@@ -532,13 +554,10 @@ body {
 
   background: #5496bd;
 }
-/*ÐºÐ¾Ð½ÐµÑ† index.html*/
-/*Ð½Ð°Ñ‡Ð°Ð»Ð¾ hotels.html*/
+/*end index.html*/
+
+/*start hotels.html*/
 .filter-hotels {
-  /* box-sizing: border-box; */
-  /* width: 100%; */
-  /* height: 220px; */
-  /* margin: 0; */
   padding: 30px 6%;
   text-align: left;
   color: #ffffff;
@@ -716,7 +735,6 @@ body {
 
 .sorting {
   margin: 0;
-  /* margin-bottom: 1px; */
   border-bottom: 1px solid #f2f2f2;
   padding: 30px 6%;
   font-size: 12px;
@@ -844,7 +862,6 @@ body {
 
 
 .hotel {
-  /* margin-bottom: 1px; */
   padding: 30px 6%;
   text-align: left;
   background: #ffffff;
@@ -852,24 +869,18 @@ body {
 }
 
 .hotel-picture {
-  /* display: block; */
   float: left;
   width: 135px;
   margin: 0;
-  /* margin-right: 30px; */
-  /* padding: 0; */
 }
 
 .rating {
   float: right;
   width: 110px;
-  /* margin: 0; */
-  /* padding: 0; */
   text-align: right;
 }
 
 .rating-stars {
-  /*background: url("../img/star.jpg");*/
   color: #81b3d2;
   margin: 0;
   margin-bottom: 35px;
@@ -895,7 +906,6 @@ body {
 .hotel-title {
   display: block;
   margin: 0;
-  /*margin-left: 155px;*/
   margin-bottom: 10px;
   padding: 0;
   text-decoration: none;
@@ -960,9 +970,9 @@ body {
   background: #503e33;
   color: rgba(255, 255, 255, 0.5);
 }
+/*end hotels.html*/
 
-/*ÐºÐ¾Ð½ÐµÑ† hotels.html*/
-/*Ð½Ð°Ñ‡Ð°Ð»Ð¾ Ð¿Ð¾Ð´Ð²Ð°Ð»Ð°*/
+/*start footer.html*/
 .map .main-footer {
   background: rgba(255,255,255,.8);
   position: absolute;
@@ -973,7 +983,7 @@ body {
 }
 
 .main-footer {
-  padding: 35px 0;
+  padding: 40px 0;
   font-size: 0;
   text-align: center;
   background: #ffffff;
@@ -986,7 +996,6 @@ body {
 .hashtag {
   display: inline-block;
   width: 33.333333%;
-  /* margin-right: 20%; */
   font-weight: bold;
   font-size: 21px;
   font-family: "PT Sans" sans-serif;
@@ -995,10 +1004,17 @@ body {
   text-decoration: none;
 }
 
+.hashtag:hover {
+  color: #81b3d2;
+}
+
+.hashtag:active {
+  color: #a9a9a9;
+}
+
 .social {
   display: inline-block;
   width: 33.3333333%;
-  /* margin-right: 15%; */
   vertical-align: middle;
 }
 
@@ -1006,7 +1022,7 @@ body {
   display: inline-block;
   width: 45px;
   height: 45px;
-  margin-right: 5px;/*ÐºÐ°Ðº Ñ‚ÐµÐºÑÑ‚ ÑÑÑ‹Ð»ÐºÐ¸ ÑÐ´Ð²Ð¸Ð½ÑƒÑ‚ÑŒ Ð·Ð° Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñƒ Ð±Ð»Ð¾ÐºÐ°, Ñ‡Ñ‚Ð¾Ð± ÐµÐ³Ð¾ Ð½Ðµ Ð±Ñ‹Ð»Ð¾ Ð²Ð¸Ð´Ð½Ð¾?*/
+  margin-right: 5px;
   font-size: 18px;
   line-height: 45px;
   vertical-align: middle;
@@ -1088,5 +1104,4 @@ body {
     height: 39px;
     background-position: -5px -103px;
 }
-/*Ð¾Ñ‚ÑÑ‚ÑƒÐ¿Ñ‹ Ð¼ÐµÐ¶Ð´Ñƒ Ñ‚Ñ€ÐµÐ¼Ñ Ð¿Ð¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»Ð°Ð¼Ð¸ Ð² Ñ„ÑƒÑ‚ÐµÑ€Ðµ Ð² Ð¿Ñ€Ð¾Ñ†ÐµÐ½Ñ‚Ð°Ñ… Ð·Ð°Ð´Ð°Ð²Ð°Ñ‚ÑŒ? ÐµÑÐ»Ð¸ Ð´Ð°, Ñ‚Ð¾ ÐºÐ°Ðº ÑÑ‚Ð¾ ÑÑ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ*/
-/*ÐºÐ¾Ð½ÐµÑ† Ð¿Ð¾Ð´Ð²Ð°Ð»Ð°*/
+/*end footer.html*/

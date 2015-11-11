@@ -44,7 +44,7 @@
           <p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
         </header>
 
-        <div class="reasons-row reasons-row-image">
+        <div class="reasons-row-image clearfix">
           <section class="reason white-color">
             <h2 class="reason-title white-color">Настоящий<br>городок</h2>
             <div class="reason-number">- №1 -</div>
@@ -62,15 +62,15 @@
           </section>
           <section class="reason reason-icon reason-icon-food">
             <h2 class="reason-title">Еда</h2>
-            <p>всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </section>
           <section class="reason reason-icon reason-icon-gift">
             <h2 class="reason-title">Сувениры</h2>
-            <p>не только китайского, но и местного производства!</p>
+            <p>Не только китайского, но и местного производства!</p>
           </section>
         </div>
 
-        <div class="reasons-row reasons-row-image">
+        <div class="reasons-row-image clearfix">
           <figure class="reason-picture">
             <img src="img/bridge.jpg" width="800" height="256" alt="мотель">
           </figure>
@@ -81,11 +81,11 @@
           </section>
         </div>
 
-        <div class="reasons-row reasons-row-gray">
+        <div class="reasons-row-gray clearfix">
           <section class="reason">
             <h2 class="reason-title">Небольшая <br>площадь</h2>
             <div class="reason-number">- №3 -</div>
-            <p>все достопримеча-<br>тельности находятся очень близко</p>
+            <p>Все достопримеча-<br>тельности находятся очень близко</p>
           </section>
           <section class="reason">
             <h2 class="reason-title">Красивая <br>дорога</h2>
@@ -123,7 +123,7 @@
               <input type="text" name="date-out" id="date-out">
             </div>
 
-            <div class="form-row clearfix">
+            <div class="form-last-row clearfix">
               <div class="form-col">
                 <label for="man">Взрослые:</label>
                 <div class="counter">
@@ -164,6 +164,11 @@
       link.addEventListener("click", function(event) {
         event.preventDefault();
         popup.classList.add("modal-content-show");
+      });
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+        popup.classList.remove("modal-error");
       });
     </script>
   </body>
