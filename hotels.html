@@ -37,7 +37,7 @@
         <form action="" method="">
           <div class="filter-col">
             <h2 class="list-title">инфраструктура:</h2>
-            <input type="checkbox" name="pool" id="pool" checked>
+            <input type="checkbox" name="pool" id="pool" checked disabled>
             <label for="pool">Бассейн</label>
             <input type="checkbox" name="parking" id="parking">
             <label for="parking">Парковка</label>
@@ -56,18 +56,8 @@
           <div class="filter-range">
             <h2 class="list-title">стоимость в сутки (р):</h2>
             <div class="price-controls">
-              <table class="table-price">
-                <tr>
-                <td class="td-price">
-                <label for="min-price">от</label>
-                <input class="min-price" type="text" name="min-price" value="0">
-                </td>
-                <td class="td-price">
-                <label for="max-price">до</label>
-                <input class="" type="text" name="max-price" value="3 000">
-                </td>
-                </tr>
-              </table>
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3 000"></label>
             </div>
             <div class="range-controls">
                 <div class="scale">

@@ -88,19 +88,19 @@ body {
 .reasons-row-gray .reason-title,
 .reasons-row-image .reason-title {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 0;
 
   font-weight: bold;
   font-size: 21px;
-  line-height: 24px;
+  line-height: 21px;
   font-family: "PT Sans" sans-serif;
   color: #000000;
 }
 
 .reasons-title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   padding: 0;
 
   font-weight: bold;
@@ -262,7 +262,7 @@ body {
 .reasons-header {
   width: 575px;
   margin: 0 auto;
-  padding: 60px 0 50px 0;
+  padding: 58px 0 50px 0;
 }
 
 .reasons-header p {
@@ -311,10 +311,40 @@ body {
   line-height: 21px;
 }
 
-.reason-number {
-  margin: 0;
+.line {
+  text-align: center;
   margin-bottom: 17px;
-  padding: 0;
+}
+
+.reason-number {
+  position: relative;
+  z-index:2;
+  display: inline;
+  margin: 0;
+  padding: 0 6px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  background: #81b3d2;
+}
+
+.line::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 50px;
+  top: -13px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.reasons-row-gray .reason-number {
+  background: #eeeeee;
+}
+
+.reasons-row-gray .line::after{
+  border-color: rgba(151, 151, 151, 0.5);
 }
 
 .reason-picture {
@@ -349,7 +379,7 @@ body {
 }
 
 .search {
-  padding-top: 55px;
+  padding-top: 49px;
   background: #ffffff;
 }
 
@@ -363,7 +393,7 @@ body {
 .search-btn {
   display: block;
   box-sizing: border-box;
-  width: 575px;
+  width: 570px;
   height: 85px;
   margin: 0 auto;
   padding: 32px 0;
@@ -393,8 +423,8 @@ body {
 
 .form {
   box-sizing: border-box;
-  width: 575px;
-  height: 400px;
+  width: 570px;
+  height: 395px;
   margin: 0 auto;
   padding: 55px;
   font-weight: bold;
@@ -427,8 +457,8 @@ body {
 
   float: right;
   box-sizing: border-box;
-  width: 340px;
-  margin-left: 15px;
+  width: 345px;
+  margin-left: 10px;
   padding: 10px;
 
   background: #f2f2f2;
@@ -440,9 +470,9 @@ body {
   content: "\e800";
   position: absolute;
   font-family: "symbols-sedona";
-  right: 15px;
+  right: 10px;
   top: 5px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   color: #a9a9a9;
   outline: none;
@@ -455,10 +485,11 @@ body {
 
 .form-row input[name="date-in"]:focus,
 .form-row input[name="date-out"]:focus {
-  padding: 13px;
+  padding: 8px;
 
   background: #ffffff;
   border: 2px solid #e5e5e5;
+  outline: none;
 }
 
 .form-row:last-child {
@@ -473,7 +504,7 @@ body {
 }
 
 .form-col label {
-  margin-right: 50px;
+  margin-right: 40px;
 }
 
 .form-col-right {
@@ -484,7 +515,7 @@ body {
 }
 
 .form-col-right label {
-  margin-right: 30px;
+  margin-right: 27px;
 }
 
 .counter {
@@ -498,7 +529,7 @@ body {
 .counter input[name="man"],
 .counter input[name="child"] {
   box-sizing: border-box;
-  width: 40px;
+  width: 45px;
   padding: 10px 0;
 
   text-align: center;
@@ -523,7 +554,7 @@ body {
   color: #000000;
 }
 
-.form-row:active::after
+.form-row:active::after,
 .counter-btn i:active {
   color: #81b3d2;
 }
@@ -558,7 +589,7 @@ body {
 
 /*start hotels.html*/
 .filter-hotels {
-  padding: 30px 6%;
+  padding: 28px 6% 26px 6%;
   text-align: left;
   color: #ffffff;
   background: #40759f url("../img/filter-bg.jpg") no-repeat center;
@@ -575,11 +606,12 @@ body {
 .filter-col {
   float: left;
   min-width: 210px;
-  width: 30%;
-  margin: 0;
-  padding: 0;
-
+  width: 24%;
   font-size: 0;
+}
+
+.filter-col .list-title {
+  margin-bottom: 20px;
 }
 
 .filter-col input[type="checkbox"] {
@@ -590,9 +622,8 @@ body {
   display: inline-block;
   margin: 0;
   margin-right: 75px;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   padding: 0;
-
   font-size: 14px;
 }
 
@@ -610,6 +641,16 @@ body {
   margin-right: 15px;
   padding: 0;
   font-size: 25px;
+  vertical-align: middle;
+  color: #b5b5b5;
+}
+
+.filter-col input[type="checkbox"] + label:hover::before {
+  color: #ffffff;
+}
+
+.filter-col input[type="checkbox"]:disabled + label::before {
+  color: #6a6a6a;
 }
 
 .filter-col input[type="checkbox"]:checked + label::before {
@@ -622,89 +663,96 @@ body {
   margin-right: 15px;
   padding: 0;
   font-size: 25px;
-}
 
-.list-title {
-  margin: 0;
-  margin-bottom: 15px;
-  padding: 0;
-
-  font-size: 16px;
-  line-height: 16px;
 }
 
 .filter-range {
   float: right;
   min-width: 220px;
-  width: 30%;
+  width: 31%;
+}
+
+.list-title {
   margin: 0;
+  margin-bottom: 8px;
   padding: 0;
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .price-controls {
+  position: relative;
   height: 32px;
-  border: 2px solid white;
-  background: none;
-  margin: 0;
-  padding: 5px;
-  font-size: 14px;
-  line-height: 14px;
-  vertical-align: middle;
-  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 0;
+  border: 2px solid #ffffff;
   border-radius: 3px;
 }
 
+.price-controls::after {
+  content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+
+width: 2px;
+height: 22px;
+
+background: #ffffff;
+transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 34px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 32%;
+  margin-left: 18%;
+}
+
 .price-controls input {
-
-  width: 40%;
-
+  width: 65%;
+  font-family: "PT Sans", sans-serif;
   background: none;
   border: none;
-}
-
-.table-price {
-  width: 100%
-  margin: 0;
-  padding: 0;
-}
-
-.td-price {
-  padding-left: 5px;
-  border-collapse: collapse;
-}
-
-.td-price:last-child {
-  padding-left: 5px;
-  border-left: 2px solid white;
-
+  outline: none;
 }
 
 .range-controls {
     position: relative;
-    height: 40px;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 32px;
 }
-.scale{
-    margin-top: 19px;
+
+.range-controls .scale{
     height: 2px;
-    background: #8e8180;
+    background: rgba(255, 255, 255, 0.3);
 }
-.bar{
-    width: 85%;
+
+.range-controls .bar{
+    width: 80%;
     height: 2px;
     background: #ffffff;
 }
+
 .toggle{
     position: absolute;
-    top: 10px;
-    left: 0;
+    top: -9px;
     width: 4px;
     height: 4px;
-    border: 8px solid white;
+    border: 8px solid #ffffff;
     background: #ababab;
     cursor: pointer;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     border-radius: 50%;
 }
 
@@ -716,21 +764,22 @@ body {
     left: 0;
 }
 .max-toggle{
-    left: 85%;
+    left: 80%;
 }
 
 .btn-filter-search {
-  width: 135px;
-  height: 30px;
-  line-height: 21px;
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
   font-size: 14px;
+  line-height: 20px;
   text-transform: uppercase;
-  vertical-align: middle;
-  background: none;
-  border: 2px solid white;
-  margin: 0;
-  margin-left: 25%;
-  padding: 0;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
 }
 
 .sorting {
@@ -756,9 +805,7 @@ body {
   vertical-align: bottom;
   min-width: 125px;
   width: 15%;
-  margin: 0;
-  padding: 0;
-  margin-right: 30px;
+  margin-right: 20px;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -767,7 +814,7 @@ body {
 
 .sorting-title {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 40px;
 
   font-weight: bold;
   font-size: 12px;
@@ -785,7 +832,7 @@ body {
 
 .sorting-item {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 32px;
 
   font-size: 12px;
   vertical-align: bottom;
@@ -794,7 +841,6 @@ body {
 .sorting-link {
   color: #b1b1b1;
   text-decoration: none;
-
   border-bottom: 1px dotted #81b3d2;
 }
 
@@ -817,16 +863,14 @@ body {
   float: right;
   text-align: right;
   width: 10%;
-  margin: 0;
-  padding: 0;
   font-size: 0;
 }
 
 .sorting-icon {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   width: 15px;
-  margin: 5px;
+  margin-right: 7px;
   padding: 0;
   color: #cccccc;
 }
@@ -834,22 +878,14 @@ body {
 .sorting-active {
   color: #81b3d2;
 }
-.icon-up-dir {
+.icon-up-dir,
+.icon-down-dir {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
     padding: 0;
-    font-size: 26px;
-    line-height: 26px;
-}
-
-.icon-down-dir {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  font-size: 26px;
-  line-height: 26px;
+    font-size: 22px;
+    line-height: 22px;
 }
 
 .sorting-icon:hover {
@@ -862,7 +898,7 @@ body {
 
 
 .hotel {
-  padding: 30px 6%;
+  padding: 30px 6% 22px 6%;
   text-align: left;
   background: #ffffff;
   border-bottom: 1px solid #f2f2f2;
@@ -882,15 +918,22 @@ body {
 
 .rating-stars {
   color: #81b3d2;
-  margin: 0;
-  margin-bottom: 35px;
+  margin: -2px 0 45px 0;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.rating-stars .icon-star::before {
+  margin-right: 2px;
+}
+
+.rating-stars .icon-star:last-child::before {
+  margin-right: 0;
 }
 
 .rating-text {
   width: 110px;
   height: 30px;
-  margin: 0;
-  padding: 0;
   text-align: center;
   line-height: 30px;
   vertical-align: baseline;
@@ -900,14 +943,13 @@ body {
 }
 .hotel-content {
   font-size: 0;
-  margin: 0 130px 0 155px;
+  margin: 0 130px 0 165px;
 }
 
 .hotel-title {
   display: block;
-  margin: 0;
-  margin-bottom: 10px;
-  padding: 0;
+  margin-top: -3px;
+  margin-bottom: 12px;
   text-decoration: none;
   font-size: 21px;
   line-height: 21px;
@@ -926,19 +968,18 @@ body {
 .hotel-btn {
   display: inline-block;
   margin-right: 5px;
-
   font-size: 14px;
   line-height: 14px;
 }
 
 .btn {
   display: block;
-  height: 30px;
-  margin-top: 15px;
-  padding: 0 20px;
+  height: 26px;
+  margin-top: 18px;
+  padding: 0 17px;
 
   font-weight: bold;
-  line-height: 30px;
+  line-height: 24px;
   font-family: "PT Sans" sans-serif;
   vertical-align: baseline;
   color: #ffffff;
@@ -983,7 +1024,7 @@ body {
 }
 
 .main-footer {
-  padding: 40px 0;
+  padding: 37px 0 45px 0;
   font-size: 0;
   text-align: center;
   background: #ffffff;
@@ -1021,9 +1062,9 @@ body {
 .social-btn {
   display: inline-block;
   width: 45px;
-  height: 45px;
+  height: 47px;
   margin-right: 5px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 45px;
   vertical-align: middle;
   text-decoration: none;
