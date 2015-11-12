@@ -250,8 +250,8 @@ body {
 .promo img {
   position: absolute;
   top: 75px;
-  left: 31%;
-
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0;
 }
 
@@ -605,7 +605,7 @@ body {
 
 .filter-col {
   float: left;
-  min-width: 210px;
+  min-width: 220px;
   width: 24%;
   font-size: 0;
 }
@@ -716,11 +716,11 @@ transform: translate(-50%, -50%);
 .price-controls .min-price,
 .price-controls .max-price {
   width: 32%;
-  margin-left: 18%;
+  margin-left: 16%;
 }
 
 .price-controls input {
-  width: 65%;
+  width: 60%;
   font-family: "PT Sans", sans-serif;
   background: none;
   border: none;
@@ -803,7 +803,7 @@ transform: translate(-50%, -50%);
 .content-title {
   display: inline-block;
   vertical-align: bottom;
-  min-width: 125px;
+  min-width: 135px;
   width: 15%;
   margin-right: 20px;
   font-weight: bold;
