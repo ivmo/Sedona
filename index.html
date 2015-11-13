@@ -159,17 +159,14 @@
     </div>
     <script>
       var link = document.querySelector(".search-btn");
-      var popup = document.querySelector(".modal-content");
-      var close = document.querySelector(".modal-content-close");
+      var popup = document.querySelector(".form");
+
       link.addEventListener("click", function(event) {
         event.preventDefault();
-        popup.classList.add("modal-content-show");
+        popup.classList.toggle("form-show");
       });
-      close.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.remove("modal-content-show");
-        popup.classList.remove("modal-error");
-      });
+
+
     </script>
   </body>
 </html>

@@ -431,6 +431,11 @@ body {
   background-color: #ffffff;
   position: relative;
   z-index: 20;
+  display: none;
+}
+
+.form-show {
+  display: block;
 }
 
 .form-row,
@@ -458,7 +463,7 @@ body {
   float: right;
   box-sizing: border-box;
   width: 345px;
-  margin-left: 10px;
+  margin-left: 12px;
   padding: 10px;
 
   background: #f2f2f2;
@@ -499,12 +504,14 @@ body {
 .form-col {
   float: left;
   width: 240px;
-
-  text-align: left;
+  position: relative;
+  /*text-align: left;*/
 }
 
 .form-col label {
-  margin-right: 40px;
+  position: absolute;
+  left: 0;
+  top: 7px;
 }
 
 .form-col-right {
@@ -524,6 +531,10 @@ body {
   vertical-align: baseline;
 
   background: #f2f2f2;
+}
+
+.form-col .counter {
+  margin-left: 115px;
 }
 
 .counter input[name="man"],
