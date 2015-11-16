@@ -66,7 +66,7 @@ body {
   width: 100%;
   font-size: 14px;
   line-height: 26px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   text-align: center;
   color: #000000;
   text-transform: uppercase;
@@ -81,7 +81,7 @@ body {
   font-weight: bold;
   font-size: 21px;
   line-height: 24px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #000000;
 }
 
@@ -94,7 +94,7 @@ body {
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #000000;
 }
 
@@ -105,7 +105,7 @@ body {
 
   font-weight: bold;
   font-size: 21px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #000000;
 }
 
@@ -116,7 +116,7 @@ body {
   font-weight: bold;
   font-size: 30px;
   line-height: 30px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #000000;
 }
 
@@ -178,7 +178,7 @@ body {
   padding: 15px 0;
   margin: 0;
   font-weight: bold;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #000000;
   text-decoration: none;
 }
@@ -350,9 +350,18 @@ body {
 .reason-picture {
   float: left;
   width: 66.666666%;
+  height: 256px;
+  position: relative;
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+.reason-picture img {
+ transform: scale(0.5) translate(-50%,-580px);
+ position: absolute;
+ top: 0;
+ left: 0;
 }
 
 .reason-icon {
@@ -436,6 +445,38 @@ body {
 
 .form-show {
   display: block;
+  -webkit-animation: bounce 0.6s;
+  animation: bounce 0.6s;
+}
+
+.form-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
+  background-color: #FFCCCC;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
 }
 
 .form-row,
@@ -505,7 +546,6 @@ body {
   float: left;
   width: 240px;
   position: relative;
-  /*text-align: left;*/
 }
 
 .form-col label {
@@ -656,8 +696,13 @@ body {
   color: #b5b5b5;
 }
 
+.filter-col label:hover {
+  cursor: pointer;
+}
+
 .filter-col input[type="checkbox"] + label:hover::before {
   color: #ffffff;
+  /*cursor: pointer;*/
 }
 
 .filter-col input[type="checkbox"]:disabled + label::before {
@@ -820,7 +865,7 @@ transform: translate(-50%, -50%);
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 .sorting-title {
@@ -991,7 +1036,7 @@ transform: translate(-50%, -50%);
 
   font-weight: bold;
   line-height: 24px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   vertical-align: baseline;
   color: #ffffff;
   text-decoration: none;
@@ -1050,7 +1095,7 @@ transform: translate(-50%, -50%);
   width: 33.333333%;
   font-weight: bold;
   font-size: 21px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   vertical-align: middle;
   color: #000000;
   text-decoration: none;
@@ -1072,8 +1117,8 @@ transform: translate(-50%, -50%);
 
 .social-btn {
   display: inline-block;
-  width: 45px;
-  height: 47px;
+  width: 46px;
+  height: 48px;
   margin-right: 5px;
   font-size: 20px;
   line-height: 45px;
@@ -1110,7 +1155,7 @@ transform: translate(-50%, -50%);
   display: inline-block;
   width: 33.3333333%;
   font-size: 14px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   vertical-align: middle;
 }
 

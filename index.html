@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&amp;subset=latin,cyrillic-ext" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>Sedona</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&amp;subset=latin,cyrillic-ext">
   </head>
   <body>
     <div class="main-container">
@@ -13,7 +13,7 @@
           <nav class="main-navigation">
             <figure class="logo">
               <a href="#">
-                <img src="img/logo.png" width="" height="" alt="city of sedona">
+                <img src="img/logo.png" width="138" height="70" alt="city of sedona">
               </a>
             </figure>
             <ul>
@@ -34,7 +34,7 @@
       </header>
 
       <div class="promo">
-        <img src="img/text.png" width="" height="" alt="sedona">
+        <img src="img/text.png" width="458" height="352" alt="sedona">
       </div>
 
       <article class="reasons">
@@ -51,7 +51,7 @@
             <p>седона - не аттракцион для туристов, там течет своя жизнь</p>
           </section>
           <figure class="reason-picture">
-            <img src="img/hotel.jpg" width="800" height="256" alt="отель">
+            <img src="img/hotel.jpg" width="" height="" alt="отель">
           </figure>
         </div>
 
@@ -72,7 +72,7 @@
 
         <div class="reasons-row-image clearfix">
           <figure class="reason-picture">
-            <img src="img/bridge.jpg" width="800" height="256" alt="мотель">
+            <img src="img/bridge.jpg" width="" height="" alt="мотель">
           </figure>
           <section class="reason white-color">
             <h2 class="reason-title white-color">Там есть<br>мост дьявола</h2>
@@ -108,7 +108,7 @@
 
       <div class="map">
 
-        <div class="map-canvas"></div> <!-- этот блок для встройки яваскрипта -->
+        <div class="map-canvas" id="yandex-map"></div> <!-- этот блок для встройки яваскрипта -->
 
         <div class="form">
           <form action="/echo" method="post">
@@ -160,13 +160,33 @@
     <script>
       var link = document.querySelector(".search-btn");
       var popup = document.querySelector(".form");
+      var date_in = popup.querySelector("[name='date-in']");
+      var date_out = popup.querySelector("[name='date-out']");
+      var form = popup.querySelector("form");
 
       link.addEventListener("click", function(event) {
         event.preventDefault();
         popup.classList.toggle("form-show");
+        popup.classList.remove("form-error");
+        date_in.focus();
       });
-
-
+      form.addEventListener("submit", function(event) {
+        if (!date_in.value || !date_out.value) {
+          event.preventDefault();
+          popup.classList.remove("form-error");
+          popup.offsetWidth = popup.offsetWidth;
+          popup.classList.add("form-error");
+      }
+      });
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("form-show")) {
+            popup.classList.remove("form-show");
+            popup.classList.remove("form-error");
+          }
+        }
+      });
     </script>
+    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=3LB3EDPnygVXMY8q-xq6f_Sjy-0DQm0n&width=100%&height=100%&id=yandex-map&lang=ru_RU&sourceType=constructor"></script>
   </body>
 </html>
