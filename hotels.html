@@ -2,20 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <title>отели</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&amp;subset=latin,cyrillic-ext">
+    <link href="css/style.min.css" rel="stylesheet">
+    <title>Отели</title>
   </head>
   <body>
     <div class="main-container">
       <header class="main-header clearfix">
           <nav class="main-navigation">
-            <figure class="logo">
-              <a href="index.html">
-                <img src="img/logo.png" width="" height="" alt="city of sedona">
-              </a>
-            </figure>
+            <a class="logo" href="index.html">
+              <img src="img/logo.png" width="138" height="70" alt="city of sedona">
+            </a>
             <ul>
               <li>
                 <a href="#">информация</a>
@@ -34,7 +32,7 @@
       </header>
 
       <div class="filter-hotels">
-        <form action="" method="">
+        <form action="/echo" method="post">
           <div class="filter-col">
             <h2 class="list-title">инфраструктура:</h2>
             <input type="checkbox" name="pool" id="pool" checked disabled>
@@ -66,17 +64,22 @@
                 <div class="toggle min-toggle"></div>
                 <div class="toggle max-toggle"></div>
             </div>
-            <button class="btn-filter-search" type="submit">Показать</button>
+            <a class="btn-filter-search" href="#">Показать</a>
           </div>
         </form>
       </div>
 
       <div class="sorting clearfix">
-
+        <div class="content-title">Найдено: 3</div>
+        <div class="sorting-abc">
+          <a class="sorting-icon" href="#"><i class="icon-up-dir"></i></a>
+          <a class="sorting-icon sorting-active" href="#"><i class="icon-down-dir"></i></a>
+        </div>
         <div class="sorting-type">
-          <div class="content-title">Найдено: 3</div>
-          <div class="sorting-title">Сортировка:</div>
           <ul class="sorting-items">
+            <li class="sorting-item-title">
+              <span class="sorting-title">Сортировка:</span>
+            </li>
             <li class="sorting-item">
               <a class="sorting-link current-sorting-link" href="#">По цене</a>
             </li>
@@ -87,11 +90,6 @@
               <a class="sorting-link" href="#">По рейтингу</a>
             </li>
           </ul>
-
-        </div>
-        <div class="sorting-abc">
-          <a class="sorting-icon" href="#"><i class="icon-up-dir"></i></a>
-          <a class="sorting-icon sorting-active" href="#"><i class="icon-down-dir"></i></a>
         </div>
       </div>
 
@@ -106,7 +104,9 @@
           <div class="rating-text">Рейтинг: 8,5</div>
         </div>
         <div class="hotel-content">
-          <a class="hotel-title" href="#">Amara resort & spa</a>
+          <div class="hotel-title">
+          <a href="#">Amara resort & spa</a>
+          </div>
           <div class="hotel-btn">
             Гостиница
             <a class="btn btn-blue" href="#">Подробнее</a>
@@ -129,7 +129,9 @@
             <div class="rating-text">Рейтинг: 8,9</div>
           </div>
           <div class="hotel-content">
-            <a class="hotel-title" href="#">Desert quail inn</a>
+            <div class="hotel-title">
+            <a href="#">Desert quail inn</a>
+            </div>
             <div class="hotel-btn">
               Мотель
               <a class="btn btn-blue" href="#">Подробнее</a>
@@ -152,7 +154,9 @@
             <div class="rating-text">Рейтинг: 9,2</div>
           </div>
           <div class="hotel-content">
-            <a class="hotel-title" href="#">Villas at poco diablo</a>
+            <div class="hotel-title">
+            <a href="#">Villas at poco diablo</a>
+            </div>
             <div class="hotel-btn">
               Апартаменты
               <a class="btn btn-blue" href="#">Подробнее</a>
@@ -165,7 +169,9 @@
         </section>
 
         <footer class="main-footer">
-          <a href="#" class="hashtag">#visitsedona</a>
+          <div class="hashtag">
+            <a href="#">#visitsedona</a>
+          </div>
           <div class="social">
             <a href="#" class="social-btn icon-twitter"></a>
             <a href="#" class="social-btn icon-facebook"></a>

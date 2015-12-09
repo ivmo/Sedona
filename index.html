@@ -2,20 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&amp;subset=latin,cyrillic-ext" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <title>Sedona</title>
   </head>
   <body>
     <div class="main-container">
       <header class="main-header">
           <nav class="main-navigation">
-            <figure class="logo">
-              <a href="#">
+              <a class="logo" href="#">
                 <img src="img/logo.png" width="138" height="70" alt="city of sedona">
               </a>
-            </figure>
             <ul>
               <li>
                 <a href="#">информация</a>
@@ -34,7 +32,9 @@
       </header>
 
       <div class="promo">
-        <img src="img/text.png" width="458" height="352" alt="sedona">
+        <figure class="promo-pic">
+          <img src="img/text.png" width="458" height="352" alt="sedona">
+        </figure>
       </div>
 
       <article class="reasons">
@@ -51,20 +51,23 @@
             <p>седона - не аттракцион для туристов, там течет своя жизнь</p>
           </section>
           <figure class="reason-picture">
-            <img src="img/hotel.jpg" width="" height="" alt="отель">
+            <img src="img/hotel.jpg" width="1600" height="800" alt="отель">
           </figure>
         </div>
 
         <div class="reasons-row">
-          <section class="reason reason-icon reason-icon-home">
+          <section class="reason reason-icon">
+            <i class="sprite sprite-home"></i>
             <h2 class="reason-title">Жилье</h2>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </section>
-          <section class="reason reason-icon reason-icon-food">
+          <section class="reason reason-icon">
+            <i class="sprite sprite-food"></i>
             <h2 class="reason-title">Еда</h2>
             <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </section>
-          <section class="reason reason-icon reason-icon-gift">
+          <section class="reason reason-icon">
+            <i class="sprite sprite-gift"></i>
             <h2 class="reason-title">Сувениры</h2>
             <p>Не только китайского, но и местного производства!</p>
           </section>
@@ -72,7 +75,7 @@
 
         <div class="reasons-row-image clearfix">
           <figure class="reason-picture">
-            <img src="img/bridge.jpg" width="" height="" alt="мотель">
+            <img src="img/bridge.jpg" width="1600" height="800" alt="мотель">
           </figure>
           <section class="reason white-color">
             <h2 class="reason-title white-color">Там есть<br>мост дьявола</h2>
@@ -103,12 +106,12 @@
       <div class="search">
         <h2 class="search-title">Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a href="#" class="search-btn">Поиск гостиницы в седоне</a>
+        <a href="search-form.html" class="search-btn">Поиск гостиницы в седоне</a>
       </div>
 
       <div class="map">
 
-        <div class="map-canvas" id="yandex-map"></div> <!-- этот блок для встройки яваскрипта -->
+        <div class="map-canvas" id="yandex-map"></div>
 
         <div class="form">
           <form action="/echo" method="post">
@@ -147,7 +150,9 @@
         </div>
 
         <footer class="main-footer .main-footer-index">
-          <a href="#" class="hashtag">#visitsedona</a>
+          <div class="hashtag">
+            <a href="#">#visitsedona</a>
+          </div>
           <div class="social">
             <a href="#" class="social-btn icon-twitter"></a>
             <a href="#" class="social-btn icon-facebook"></a>
@@ -157,36 +162,7 @@
         </footer>
       </div>
     </div>
-    <script>
-      var link = document.querySelector(".search-btn");
-      var popup = document.querySelector(".form");
-      var date_in = popup.querySelector("[name='date-in']");
-      var date_out = popup.querySelector("[name='date-out']");
-      var form = popup.querySelector("form");
-
-      link.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.toggle("form-show");
-        popup.classList.remove("form-error");
-        date_in.focus();
-      });
-      form.addEventListener("submit", function(event) {
-        if (!date_in.value || !date_out.value) {
-          event.preventDefault();
-          popup.classList.remove("form-error");
-          popup.offsetWidth = popup.offsetWidth;
-          popup.classList.add("form-error");
-      }
-      });
-      window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-          if (popup.classList.contains("form-show")) {
-            popup.classList.remove("form-show");
-            popup.classList.remove("form-error");
-          }
-        }
-      });
-    </script>
+    <script src="js/search.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=3LB3EDPnygVXMY8q-xq6f_Sjy-0DQm0n&width=100%&height=100%&id=yandex-map&lang=ru_RU&sourceType=constructor"></script>
   </body>
 </html>

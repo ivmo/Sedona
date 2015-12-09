@@ -1,0 +1,48 @@
+<i class="sprite sprite-1"></i>
+<i class="sprite sprite-2"></i>
+<i class="sprite sprite-3"></i>
+<i class="sprite sprite-food"></i>
+<i class="sprite sprite-gift"></i>
+<i class="sprite sprite-home"></i>
+
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-1 {
+    width: 113px;
+    height: 39px;
+    background-position: -5px -5px;
+}
+
+.sprite-2 {
+    width: 113px;
+    height: 39px;
+    background-position: -5px -54px;
+}
+
+.sprite-3 {
+    width: 113px;
+    height: 39px;
+    background-position: -5px -103px;
+}
+
+.sprite-food {
+    width: 74px;
+    height: 70px;
+    background-position: -128px -5px;
+}
+
+.sprite-gift {
+    width: 64px;
+    height: 76px;
+    background-position: -128px -85px;
+}
+
+.sprite-home {
+    width: 75px;
+    height: 72px;
+    background-position: -5px -171px;
+}
